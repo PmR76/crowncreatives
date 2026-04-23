@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(applyTransition, 50);
 
   function updateIcon(theme) {
-    icon.src = "/assets/icons/sun-moon-magic.svg";
+    icon.src = "{{ '/assets/icons/sun-moon-magic.svg' | relative_url }}";
+
   }
 
   updateIcon(initial);
