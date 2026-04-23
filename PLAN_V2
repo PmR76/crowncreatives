@@ -1,0 +1,510 @@
+PLAN: Keep this as the main objectives whilst building the site (Aim: A creative website where we can encourage creativity and recovery. 
+I have CPTSD, Function Neurological Disorder and depression diagnosed in 2024. This will be admin access site where admin can fully edit the site including pages such as headers,
+pages (add and subtract) and footers. This website can viwed on PC, tablet and mobile phone screens. These pages will have scrolling capability in order to retain the page content as admin desires.   
+1. Font: 'Cinzel Decorative', serif; Header (transparent, magical background - like the footer): head-crown.svg to of header center CROWN CREATIVES and underneath (centre) tagline Artistry Resilience Imagination.
+2. Toggle to day and Night (top right of header) medium sized icon with a glowing shimering affect.
+3.  Navigation bar: Magical horizontal nav  sit snuggly under the header. This header will appear on every page. The nav bar has Home, About, Gallery, Projects, Videos, Prodcasts, Blog, Contact.
+4.  Main home page:  Beautiful summer daytime magical background (go all out) day-crown.svg 189px X 189px wil be in the centre of screen, snugly underneath the nav bar. When toogled by the day/night button
+beautiful magical transition (8 seconds) will occur not just to magical night, but the day-crown.svg itself will magical transform to night-crown.svg Either side of the day-crown>.svg and night-crown.svg will be
+the home screen gallery (full images will be placed in the galllery by admin and will not require naming within code). The inteligent gallery will ramdomly sellect the gallery images and appear magically on the left and right of the day-crown.svg or night-crown.svg. Ensuring that these
+magical images slowly appear and disapear within pre-determined gallery lanes.
+5. Underneath the gallery lanes will be magical cards that are glass like so you can see the magical background. The 3 cards will remind the viewer od the tag lines:Card 1: Artistry (Celebrating creative expression through design, craft, and storytelling). Card 2: Resilience (Honouring strength, growth, and the courage to evolve through challenges). Card 3: Imagination (Igniting wonder and innovation — where ideas transform into magical realities).
+Magical horizontal inspirational continuous ticker just above the footer space (on every page). Footer (transparent magical background - same size as the header) will be the same on every page. It will have the crown creatives copyright and social media links to
+Facebook:   www.facebook.com/people/Crown-Creatives/61556386467490/ Instigram: https://www.instagram.com/crown_creatives_uk/ and email: crowncreatives@outlook.com and copilot.
+Then in the right hand corner a toggle for back to top of the page. The toogles for social media, day/night toggle, back to top should look similar, magical and be seen in dark mode. In dark mode all text, toggles, navigation and ticker message will clearly glow providing clarity of message/icon.
+Always use inscape for a clean png/jpeg background removal and colour/black and white file conversion to svg. 
+use the GitHub API autoscan
+copilot-magic.svg
+email-magic.svg
+facebook-magic.svg
+instagram-magic.svg
+sun-moon-magic.svg
+up-arrow-magic.svg
+
+# 🌟 Welcome to Crown Creatives  
+*A magical space for artistry, resilience, and imagination.*
+
+<p align="center">
+  <img src="assets/img/head-crown.svg" width="140" alt="Crown Creatives Logo">
+</p>
+
+Crown Creatives is a digital sanctuary built to inspire creativity, support emotional wellbeing, and celebrate the power of imagination.  
+Whether you're exploring art, seeking inspiration, or beginning your own creative recovery journey — this space is for you.
+
+---
+
+## ✨ Highlights
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Live-00c853?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Magic-Enabled-ff69b4?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Day%2FNight-8s%20Transition-ffd600?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Responsive-Yes-blue?style=for-the-badge">
+</p>
+
+---
+
+## 🎨 What Crown Creatives Offers
+
+### 🪄 A Magical Interface  
+- Transparent glass header and footer  
+- Shimmering day/night toggle  
+- Cinematic 8‑second transitions  
+- A living background engine with aurora, nebula, sparkles, and soft vignette  
+
+### 🖼 Intelligent Gallery  
+- Randomised image selection  
+- Smooth fade‑in/out animations  
+- No naming rules — just upload and enjoy  
+
+### 🪟 Creative Tools & Inspiration  
+- Artistic inspiration cards  
+- Creative recovery tools  
+- Contact card for connecting with the community  
+
+### 📱 Fully Responsive  
+Designed for:
+- PC  
+- Tablet  
+- Mobile  
+
+---
+
+## 🏠 Homepage Preview
+
+<p align="center">
+  <img src="https://via.placeholder.com/1000x450/222/ffffff?text=Homepage+Preview+Coming+Soon" alt="Homepage Preview">
+</p>
+
+The homepage features:
+- A magical day or night background  
+- A glowing hero crown  
+- Intelligent gallery lanes  
+- Glass‑style magical cards  
+- An inspirational ticker  
+
+---
+
+## 📄 Project Plan  
+Developers and collaborators can view the full build plan here:
+
+👉 **[PLAN.md](PLAN.md)**
+
+---
+
+## 🧱 Technology  
+Crown Creatives is built using:
+- **Jekyll** (GitHub Pages)  
+- **HTML / CSS / JavaScript**  
+- **SVG‑based magical assets**  
+- **Responsive layout engine**  
+
+---
+
+## 🤝 Contributing  
+Crown Creatives is a growing project.  
+Contribution guidelines will be added as the platform expands.
+
+If you have ideas, inspiration, or creative suggestions, feel free to reach out.
+
+---
+1. Your actual GitHub folder structure (confirmed)
+/assets/icons/
+facebook-magic.svg
+
+instagram-magic.svg
+
+email-magic.svg
+
+copilot-magic.svg
+
+sun-moon-magic.svg
+
+up-arrow-magic.svg
+
+/assets/img/
+head-crown.svg
+
+day-crown.svg
+
+night-crown.svg
+
+This is correct and exactly what we want.
+
+## 📬 Connect With Us  
+Stay connected and explore more:
+
+- **Instagram:** https://www.instagram.com/crown_creatives_uk/  
+- **Facebook:** https://www.facebook.com/people/Crown-Creatives/61556386467490/  
+- **Email:** crowncreatives@outlook.com  
+
+---
+
+<p align="center">
+  <em>“Artistry. Resilience. Imagination.”</em>
+</p>
+
+Icon set rune set:
+sun-moon-magic.svg:
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stoneBase" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#f5f7ff"/>
+      <stop offset="45%" stop-color="#c7cfdd"/>
+      <stop offset="100%" stop-color="#8b93a3"/>
+    </radialGradient>
+
+    <radialGradient id="crystalVeins" cx="20%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#7be9ff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7b9dff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2b3250" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="rimLight" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Dual sun/moon rune glow -->
+    <radialGradient id="runeGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#ffe9a6"/>
+      <stop offset="40%" stop-color="#9f8cff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="sunMoonInnerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 1
+                0 0 0 0 0.93
+                0 0 0 0 0.75
+                0 0 0 0.9 0" result="glow"/>
+      <feBlend in="SourceGraphic" in2="glow" mode="screen"/>
+    </filter>
+  </defs>
+
+  <circle cx="36" cy="36" r="32" fill="url(#stoneBase)"/>
+  <circle cx="36" cy="36" r="30" fill="url(#crystalVeins)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="32" fill="url(#rimLight)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="22" fill="url(#runeGlow)" opacity="0.9"/>
+
+  <!-- Sun / Moon hybrid glyph -->
+  <g transform="translate(36 36)" filter="url(#sunMoonInnerGlow)">
+    <!-- Sun circle (left) -->
+    <circle cx="-3" cy="0" r="6.5"
+      fill="none" stroke="#fff7d9" stroke-width="2.2"/>
+
+    <!-- Sun rays -->
+    <g stroke="#fff7d9" stroke-width="2" stroke-linecap="round">
+      <line x1="-3" y1="-11" x2="-3" y2="-8"/>
+      <line x1="-3" y1="11"  x2="-3" y2="8"/>
+      <line x1="-11" y1="0"  x2="-8" y2="0"/>
+      <line x1="5"  y1="0"   x2="2"  y2="0"/>
+      <line x1="-9.5" y1="-9.5" x2="-7.2" y2="-7.2"/>
+      <line x1="-9.5" y1="9.5"  x2="-7.2" y2="7.2"/>
+    </g>
+
+    <!-- Crescent moon (right) -->
+    <path
+      d="M 4 -7
+         A 7 7 0 1 0 4 7
+         A 5 5 0 1 1 4 -7 Z"
+      fill="none"
+      stroke="#f3ecff"
+      stroke-width="2.2"
+      stroke-linejoin="round"/>
+  </g>
+</svg>
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stoneBase" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#f5f7ff"/>
+      <stop offset="45%" stop-color="#c7cfdd"/>
+      <stop offset="100%" stop-color="#8b93a3"/>
+    </radialGradient>
+
+    <radialGradient id="crystalVeins" cx="20%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#7be9ff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7b9dff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2b3250" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="rimLight" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Facebook blue rune glow -->
+    <radialGradient id="runeGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#7fd0ff"/>
+      <stop offset="40%" stop-color="#3b82ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="fbInnerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.85
+                0 0 0 0 0.94
+                0 0 0 0 1
+                0 0 0 0.9 0" result="glow"/>
+      <feBlend in="SourceGraphic" in2="glow" mode="screen"/>
+    </filter>
+  </defs>
+
+  <circle cx="36" cy="36" r="32" fill="url(#stoneBase)"/>
+  <circle cx="36" cy="36" r="30" fill="url(#crystalVeins)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="32" fill="url(#rimLight)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="22" fill="url(#runeGlow)" opacity="0.9"/>
+
+  <!-- Engraved Facebook "f" -->
+  <g transform="translate(36 36)">
+    <path
+      d="M 3 -16 h -4 c -5.5 0 -9 3.6 -9 9.2 v 4.3 h -5 v 6.5 h 5 v 12 h 7 v -12 h 5.2 l 1.8 -6.5 h -7 v -3.7 c 0 -2.1 0.9 -3.3 3.4 -3.3 h 3.6 z"
+      fill="none"
+      stroke="#e9f4ff"
+      stroke-width="2.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      filter="url(#fbInnerGlow)"
+    />
+  </g>
+</svg>
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stoneBase" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#f5f7ff"/>
+      <stop offset="45%" stop-color="#c7cfdd"/>
+      <stop offset="100%" stop-color="#8b93a3"/>
+    </radialGradient>
+
+    <radialGradient id="crystalVeins" cx="20%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#7be9ff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7b9dff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2b3250" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="rimLight" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Instagram magenta rune glow -->
+    <radialGradient id="runeGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#ff9ad9"/>
+      <stop offset="40%" stop-color="#ff5fa9" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="igInnerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 1
+                0 0 0 0 0.85
+                0 0 0 0 0.95
+                0 0 0 0.9 0" result="glow"/>
+      <feBlend in="SourceGraphic" in2="glow" mode="screen"/>
+    </filter>
+  </defs>
+
+  <circle cx="36" cy="36" r="32" fill="url(#stoneBase)"/>
+  <circle cx="36" cy="36" r="30" fill="url(#crystalVeins)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="32" fill="url(#rimLight)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="22" fill="url(#runeGlow)" opacity="0.9"/>
+
+  <!-- Engraved Instagram glyph -->
+  <g transform="translate(36 36)">
+    <!-- Outer rounded square -->
+    <rect x="-11" y="-11" width="22" height="22" rx="6"
+      fill="none" stroke="#ffe9ff" stroke-width="2.4"
+      filter="url(#igInnerGlow)"/>
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="5.2"
+      fill="none" stroke="#ffe9ff" stroke-width="2.2"
+      filter="url(#igInnerGlow)"/>
+    <!-- Small top-right dot -->
+    <circle cx="6.5" cy="-6.5" r="1.6"
+      fill="#ffe9ff" filter="url(#igInnerGlow)"/>
+  </g>
+</svg>
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stoneBase" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#f5f7ff"/>
+      <stop offset="45%" stop-color="#c7cfdd"/>
+      <stop offset="100%" stop-color="#8b93a3"/>
+    </radialGradient>
+
+    <radialGradient id="crystalVeins" cx="20%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#7be9ff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7b9dff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2b3250" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="rimLight" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Email cyan rune glow -->
+    <radialGradient id="runeGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#9ff6ff"/>
+      <stop offset="40%" stop-color="#3bd4ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="mailInnerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.85
+                0 0 0 0 0.98
+                0 0 0 0 1
+                0 0 0 0.9 0" result="glow"/>
+      <feBlend in="SourceGraphic" in2="glow" mode="screen"/>
+    </filter>
+  </defs>
+
+  <circle cx="36" cy="36" r="32" fill="url(#stoneBase)"/>
+  <circle cx="36" cy="36" r="30" fill="url(#crystalVeins)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="32" fill="url(#rimLight)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="22" fill="url(#runeGlow)" opacity="0.9"/>
+
+  <!-- Engraved envelope -->
+  <g transform="translate(36 36)">
+    <rect x="-11" y="-7" width="22" height="14" rx="2.5"
+      fill="none" stroke="#e9faff" stroke-width="2.2"
+      filter="url(#mailInnerGlow)"/>
+    <path d="M -11 -7 L 0 1.5 L 11 -7"
+      fill="none" stroke="#e9faff" stroke-width="2.2"
+      stroke-linecap="round" stroke-linejoin="round"
+      filter="url(#mailInnerGlow)"/>
+  </g>
+</svg>
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stoneBase" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#f5f7ff"/>
+      <stop offset="45%" stop-color="#c7cfdd"/>
+      <stop offset="100%" stop-color="#8b93a3"/>
+    </radialGradient>
+
+    <radialGradient id="crystalVeins" cx="20%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#7be9ff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7b9dff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2b3250" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="rimLight" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Copilot violet rune glow -->
+    <radialGradient id="runeGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#d2b4ff"/>
+      <stop offset="40%" stop-color="#8b5dff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="cpInnerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.92
+                0 0 0 0 0.86
+                0 0 0 0 1
+                0 0 0 0.9 0" result="glow"/>
+      <feBlend in="SourceGraphic" in2="glow" mode="screen"/>
+    </filter>
+  </defs>
+
+  <circle cx="36" cy="36" r="32" fill="url(#stoneBase)"/>
+  <circle cx="36" cy="36" r="30" fill="url(#crystalVeins)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="32" fill="url(#rimLight)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="22" fill="url(#runeGlow)" opacity="0.9"/>
+
+  <!-- Engraved intertwined loop (Copilot-like) -->
+  <g transform="translate(36 36)">
+    <path
+      d="M -7 0
+         C -7 -5, -3 -8.5, 0 -8.5
+           3 -8.5, 7 -5, 7 0
+           7 5, 3 8.5, 0 8.5
+           -3 8.5, -7 5, -7 0 Z
+         M -3 0
+         C -3 2.2, -1.5 3.8, 0 3.8
+           1.5 3.8, 3 2.2, 3 0
+           3 -2.2, 1.5 -3.8, 0 -3.8
+           -1.5 -3.8, -3 -2.2, -3 0 Z"
+      fill="none"
+      stroke="#f3ecff"
+      stroke-width="2.2"
+      stroke-linejoin="round"
+      filter="url(#cpInnerGlow)"
+    />
+  </g>
+</svg>
+<svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stoneBase" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#f5f7ff"/>
+      <stop offset="45%" stop-color="#c7cfdd"/>
+      <stop offset="100%" stop-color="#8b93a3"/>
+    </radialGradient>
+
+    <radialGradient id="crystalVeins" cx="20%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#7be9ff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#7b9dff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2b3250" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="rimLight" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Up-arrow electric blue rune glow -->
+    <radialGradient id="runeGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#a9f4ff"/>
+      <stop offset="40%" stop-color="#4bc3ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="upInnerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.85
+                0 0 0 0 0.96
+                0 0 0 0 1
+                0 0 0 0.9 0" result="glow"/>
+      <feBlend in="SourceGraphic" in2="glow" mode="screen"/>
+    </filter>
+  </defs>
+
+  <circle cx="36" cy="36" r="32" fill="url(#stoneBase)"/>
+  <circle cx="36" cy="36" r="30" fill="url(#crystalVeins)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="32" fill="url(#rimLight)" style="mix-blend-mode:screen;"/>
+  <circle cx="36" cy="36" r="22" fill="url(#runeGlow)" opacity="0.9"/>
+
+  <!-- Engraved up arrow -->
+  <g transform="translate(36 36)">
+    <path
+      d="M 0 -10 L -7  -3.2
+         M 0 -10 L  7  -3.2
+         M 0 -10 L  0  10"
+      fill="none"
+      stroke="#e9f9ff"
+      stroke-width="2.6"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      filter="url(#upInnerGlow)"
+    />
+  </g>
+</svg>
+IMAGE HERO GALLER HOME PAGE ONLY
+Next is we are going to create the hero gallery of images that appear either side of day/night-crown.svg in lanes that prevent drifting (same place) they can magicaly appear by random selection left and right of the day/night-crown.svg. This gallery can be accessed by admin and the gallery loaded without having to name indiuvidual images. Sanning engine will randomly pick up new images found in the gallery which has not been created yet. Home page only. keep the image in the same space either side of the home page crowns (on home page only) magicaly appear in the space between the header and the footer. The images will not overlap the day/night-crown.svg - The image will slowly appear hold for 10 seconds and then slowly disapear.
