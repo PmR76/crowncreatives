@@ -1,0 +1,18 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    {% if page.title %}
+      {{ page.title }} | Crown Creatives
+    {% else %}
+      Crown Creatives
+    {% endif %}
+  </title>
+
+  <!-- Core Stylesheet (Stable Restore Version) -->
+  <link rel="stylesheet" href="{{ '/assets/css/style-v2.css' | relative_url }}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+</head>
