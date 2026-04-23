@@ -1,29 +1,20 @@
 title: "Crown Creatives v2"
 description: "Clean rebuild of the Crown Creatives website."
 
-# GitHub Pages settings
 url: "https://pmr76.github.io"
-baseurl: ""
+baseurl: "/crowncreatives"
 
-# Markdown engine
 markdown: kramdown
 
-# IMPORTANT: Do NOT add a theme here
-# (Minima or any theme override will break your custom layout)
+version: 13
 
-# Force rebuild (increment this when needed)
-version: 12
-
-# Allow Jekyll to process custom folders
 include:
   - _pages
 
-# GitHub Pages–approved plugins only
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Default metadata for SEO
 defaults:
   - scope:
       path: ""
