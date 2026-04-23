@@ -1,9 +1,5 @@
-// ============================================================
-//  Crown Creatives — Theme Toggle Engine (DAY / NIGHT VERSION)
-// ============================================================
-
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
+  const root = document.body; // IMPORTANT FIX
   const toggle = document.querySelector(".theme-toggle");
   const icon = document.querySelector(".theme-icon");
 
@@ -12,20 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // ------------------------------------------------------------
-  // Load saved theme (day / night)
-  // ------------------------------------------------------------
   const saved = localStorage.getItem("cc-theme");
+  root.setAttribute("data-theme", saved === "night" ? "night" : "day");
 
-  if (saved === "day" || saved === "night") {
-    root.setAttribute("data-theme", saved);
-  } else {
-    root.setAttribute("data-theme", "day");
-  }
-
-  // ------------------------------------------------------------
-  // Smooth transition
-  // ------------------------------------------------------------
   function applyTransition() {
     root.style.transition =
       "background 1s ease, color 1s ease, filter 1s ease";
@@ -33,9 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(applyTransition, 50);
 
-  // ------------------------------------------------------------
-  // Update icon
-  // ------------------------------------------------------------
   function updateIcon(theme) {
     icon.src = theme === "night"
       ? "/assets/icons/moon.svg"
@@ -44,9 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateIcon(root.getAttribute("data-theme"));
 
-  // ------------------------------------------------------------
-  // Toggle theme (day <-> night)
-  // ------------------------------------------------------------
   toggle.addEventListener("click", () => {
     const current = root.getAttribute("data-theme");
     const next = current === "day" ? "night" : "day";
