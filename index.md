@@ -24,22 +24,17 @@ show_hero_crown: true
   <div class="hero-gallery">
     <div class="gallery-left">
       <!-- Admin adds images here -->
-      <!-- Example:
-      <img src="/assets/images/gallery/Mushroom" class="lane-img">
-      -->
     </div>
 
     <div class="gallery-right">
       <!-- Admin adds images here -->
-      <!-- Example:
-      <img src="/assets/images/gallery/fly" class="lane-img">
-      -->
     </div>
   </div>
 
 </section>
 
 <!-- PAGE CONTENT -->
+
 <section class="home-cards">
 
   <div class="card">
