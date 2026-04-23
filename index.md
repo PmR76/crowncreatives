@@ -25,14 +25,14 @@ show_hero_crown: true
     <div class="gallery-left">
       <!-- Admin adds images here -->
       <!-- Example:
-      <img src="/assets/images/gallery/img1.jpg" class="lane-img">
+      <img src="/assets/images/gallery/Mushroom" class="lane-img">
       -->
     </div>
 
     <div class="gallery-right">
       <!-- Admin adds images here -->
       <!-- Example:
-      <img src="/assets/images/gallery/img2.jpg" class="lane-img">
+      <img src="/assets/images/gallery/fly" class="lane-img">
       -->
     </div>
   </div>
