@@ -711,3 +711,25 @@ body[data-theme="night"] .magic-gallery-tile {
     display: none;
   }
 }
+/* HEADER THEME TOGGLE — MATCH FOOTER ICON SIZE */
+.theme-toggle .theme-icon {
+  width: 72px;
+  height: 72px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle .theme-icon:hover {
+  transform: scale(1.08);
+}
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
