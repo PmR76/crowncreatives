@@ -173,6 +173,86 @@ body[data-theme="night"] .crown-night {
 .site-nav a:hover {
   opacity: 0.7;
 }
+/* ============================================================
+   HEADER THEME TOGGLE — Match Footer Rune-Stone Size
+   ============================================================ */
+
+.theme-toggle {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+
+  width: 52px;          /* MATCH FOOTER */
+  height: 52px;         /* MATCH FOOTER */
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.5),
+    inset 0 0 8px rgba(255, 255, 255, 0.3);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.7),
+    inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.theme-toggle:active {
+  transform: translateY(1px) scale(0.96);
+  box-shadow:
+    0 0 8px rgba(255, 255, 255, 0.3),
+    inset 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+.theme-icon {
+  width: 32px;   /* MATCH FOOTER ICON SIZE */
+  height: 32px;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+/* ============================================================
+   BACKGROUND THEMES — Magical Day / Night Gradients
+   ============================================================ */
+
+body[data-theme="day"] {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #e8f0ff 40%,
+    #dbe7ff 100%
+  );
+  color: #222;
+}
+
+body[data-theme="night"] {
+  background: linear-gradient(
+    180deg,
+    #0a0a1a 0%,
+    #141428 40%,
+    #1a1a2e 100%
+  );
+  color: #f2f2f2;
+}
+
+/* Smooth global transition */
+body {
+  transition: background 1s ease, color 1s ease;
+}
 
 /* -------------------------------------------------- */
 /* HERO SECTION — CROWN + HERO GALLERY LANES          */
