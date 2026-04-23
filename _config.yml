@@ -1,0 +1,37 @@
+theme:
+
+title: "Crown Creatives v2"
+description: "Clean rebuild of the Crown Creatives website."
+
+# GitHub Pages settings
+url: "https://pmr76.github.io"
+baseurl: "/crown-creatives-v2"
+
+# Markdown engine
+markdown: kramdown
+
+# IMPORTANT: Disable GitHub Pages theme override
+# (This was the cause of the missing crown + gallery)
+# DO NOT add: theme: minima
+# DO NOT add any theme here
+
+# Force rebuild (increment this if GitHub Pages caches layouts)
+version: 11
+
+# Allow Jekyll to process custom folders
+include:
+  - _pages
+
+# GitHub Pages–approved plugins only
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Optional: Default metadata for SEO
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      seo:
+        type: website
