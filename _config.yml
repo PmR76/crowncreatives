@@ -5,7 +5,7 @@ description: "Clean rebuild of the Crown Creatives website."
 
 # GitHub Pages settings
 url: "https://pmr76.github.io"
-baseurl: "/crown-creatives-v2"
+baseurl: "/baseurl: "/crowncreatives"
 
 # Markdown engine
 markdown: kramdown
