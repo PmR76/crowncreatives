@@ -1,5 +1,9 @@
+// ============================================================
+//  Crown Creatives — Theme Toggle Engine (DAY / NIGHT VERSION)
+// ============================================================
+
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.body; // IMPORTANT FIX
+  const root = document.body;
   const toggle = document.querySelector(".theme-toggle");
   const icon = document.querySelector(".theme-icon");
 
@@ -9,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const saved = localStorage.getItem("cc-theme");
-  root.setAttribute("data-theme", saved === "night" ? "night" : "day");
+  const initial = saved === "night" ? "night" : "day";
+  root.setAttribute("data-theme", initial);
 
   function applyTransition() {
     root.style.transition =
@@ -20,11 +25,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateIcon(theme) {
     icon.src = theme === "night"
-      ? "/assets/icons/moon.svg"
-      : "/assets/icons/sun.svg";
+      ? "/crowncreatives/assets/icons/moon.svg"
+      : "/crowncreatives/assets/icons/sun.svg";
   }
 
-  updateIcon(root.getAttribute("data-theme"));
+  updateIcon(initial);
+
+  function updateHeroCrown(theme) {
+    const dayCrown = document.querySelector(".crown-day");
+    const nightCrown = document.querySelector(".crown-night");
+
+    if (!dayCrown || !nightCrown) return;
+
+    if (theme === "night") {
+      dayCrown.style.opacity = "0";
+      nightCrown.style.opacity = "1";
+    } else {
+      dayCrown.style.opacity = "1";
+      nightCrown.style.opacity = "0";
+    }
+  }
+
+  updateHeroCrown(initial);
 
   toggle.addEventListener("click", () => {
     const current = root.getAttribute("data-theme");
@@ -32,7 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     root.setAttribute("data-theme", next);
     localStorage.setItem("cc-theme", next);
+
     updateIcon(next);
+    updateHeroCrown(next);
     applyTransition();
   });
 });
