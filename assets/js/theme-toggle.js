@@ -23,11 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(applyTransition, 50);
 
-  function updateIcon(theme) {
-    icon.src = theme === "night"
-      ? "/crowncreatives/assets/icons/moon.svg"
-      : "/crowncreatives/assets/icons/sun.svg";
-  }
+function updateIcon(theme) {
+  icon.src = "/assets/icons/sun-moon-magic.svg";
+}
 
   updateIcon(initial);
 
