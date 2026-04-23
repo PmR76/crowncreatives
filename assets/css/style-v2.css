@@ -27,30 +27,66 @@ body {
   position: relative;
 }
 
-/* -------------------------------------------------- */
-/* THEME ENGINE — DAY & NIGHT                         */
-/* -------------------------------------------------- */
+/* ============================================================
+   THEME TOGGLE BUTTON — Magical Day/Night Orb
+   ============================================================ */
 
-:root {
-  --bg-day: radial-gradient(circle at top, #ffe9b8 0%, #f7c6ff 40%, #2b2c5f 100%);
-  --bg-night: radial-gradient(circle at top, #05030b 0%, #151533 35%, #020008 100%);
-
-  --text-day: #1b1230;
-  --text-night: #f5ecff;
-
-  --glow-day: rgba(255, 210, 150, 0.45);
-  --glow-night: rgba(120, 200, 255, 0.55);
+.theme-toggle {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.15s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.6);
+}
+
+.theme-toggle:active {
+  transform: translateY(1px) scale(0.96);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.theme-icon {
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* ============================================================
+   BACKGROUND THEMES — Day / Night
+   ============================================================ */
+
 body[data-theme="day"] {
-  background: var(--bg-day);
-  color: var(--text-day);
+  background: linear-gradient(180deg, #ffffff 0%, #e8f0ff 100%);
+  color: #222;
 }
 
 body[data-theme="night"] {
-  background: var(--bg-night);
-  color: var(--text-night);
+  background: linear-gradient(180deg, #0a0a1a 0%, #1a1a2e 100%);
+  color: #f2f2f2;
 }
+
+/* Optional: smooth global transition */
+body {
+  transition: background 1s ease, color 1s ease;
+}
+
 
 /* -------------------------------------------------- */
 /* HEADER — LOGO, TOGGLE, NAV                         */
