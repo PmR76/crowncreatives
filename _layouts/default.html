@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-<body id="top" data-theme="day" class="{{ page.layout }}">
+<body id="top" class="{{ page.layout }}">
 
   <!-- HEADER -->
   {% include header.html %}
@@ -32,8 +32,9 @@
   <!-- FOOTER -->
   {% include footer.html %}
 
-  <!-- THEME + GALLERY ENGINE -->
-  <script src="/crown-creatives-v2/assets/js/magic.js"></script>
+  <!-- THEME + HERO GALLERY ENGINE -->
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/hero-gallery.js' | relative_url }}"></script>
 
 </body>
 </html>
