@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+<body id="top" data-theme="day" class="{{ page.layout }}">
+
+  <!-- HEADER -->
+  {% include header.html %}
+
+  <!-- HERO SECTION (HOME PAGE ONLY) -->
+  {% if page.layout == "home" %}
+    {{ content | split:"<!-- PAGE CONTENT -->" | first }}
+  {% endif %}
+
+  <!-- MAIN CONTENT -->
+  <main class="site-content">
+    {% if page.layout == "home" %}
+      {{ content | split:"<!-- PAGE CONTENT -->" | last }}
+    {% else %}
+      {{ content }}
+    {% endif %}
+  </main>
+
+  <!-- INSPIRATION TICKER -->
+  <div class="inspiration-ticker">
+    <div class="ticker-track">
+      <span>✨ Imagination becomes reality ✨ Creativity is your superpower ✨ Every idea is a spark of magic ✨ Artistry transforms the ordinary ✨ Believe boldly — create fearlessly ✨</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  {% include footer.html %}
+
+  <!-- THEME + GALLERY ENGINE -->
+  <script src="/crown-creatives-v2/assets/js/magic.js"></script>
+
+</body>
+</html>
