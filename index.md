@@ -1,4 +1,4 @@
---
+---
 layout: home
 show_hero_crown: true
 ---
