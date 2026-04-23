@@ -2,6 +2,7 @@
 layout: home
 show_hero_crown: true
 ---
+
 <section class="home-cards">
 
   <div class="card">
