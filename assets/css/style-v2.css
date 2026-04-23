@@ -56,6 +56,13 @@ body[data-theme="night"] {
 /* HEADER — LOGO, TOGGLE, NAV                         */
 /* -------------------------------------------------- */
 
+/* Header Crown — fixed size */
+.header-crown-img {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
 .site-header {
   position: relative;
   text-align: center;
