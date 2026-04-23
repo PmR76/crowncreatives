@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // GitHub API endpoint for your gallery folder
   const API_URL =
-    'https://api.github.com/repos/PmR76/crown-creatives-v2/contents/assets/images/gallery';
+      'https://api.github.com/repos/PmR76/crowncreatives/contents/assets/images/gallery';
 
   // Allowed image extensions
   const VALID_EXT = ['.jpg', '.jpeg', '.png', '.webp'];
