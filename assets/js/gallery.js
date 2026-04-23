@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!galleryContainer) return;
 
   const API_URL =
-    'https://api.github.com/repos/PmR76/crown-creatives-v2/contents/assets/images/gallery';
+    'https://api.github.com/repos/PmR76/crowncreatives/assets/images/gallery';
   const VALID_EXT = ['.jpg', '.jpeg', '.png', '.webp'];
 
   const lightbox = document.getElementById('magic-lightbox');
