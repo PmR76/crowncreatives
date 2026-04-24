@@ -413,6 +413,161 @@ body[data-theme="night"] .card {
     width: 90%;
   }
 }
+/* ============================================================
+   DAY REALM — WARM ENCHANTING FANTASY (MEDIUM WARMTH)
+   CSS + SVG HYBRID
+   ============================================================ */
+
+.realm-day {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Base enchanted gradient */
+.day-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top center,
+      #FFEFD0 0%,
+      #FFE0B3 22%,
+      #FFD6C9 40%,
+      #F3E8FF 68%,
+      #DDEBFF 100%);
+  opacity: 1;
+  transition: opacity 1.2s ease;
+}
+
+/* Hide Day Realm when in night mode */
+body[data-theme="night"] .day-gradient,
+body[data-theme="night"] .day-haze,
+body[data-theme="night"] .day-particles,
+body[data-theme="night"] .day-sunbeam,
+body[data-theme="night"] .day-cloud {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Haze layer */
+.day-haze {
+  position: absolute;
+  inset: -10%;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.35) 0%, transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(255, 240, 220, 0.35) 0%, transparent 60%);
+  mix-blend-mode: screen;
+  opacity: 0.45;
+  animation: dayHazeDrift 80s linear infinite;
+}
+
+@keyframes dayHazeDrift {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(40px); }
+  100% { transform: translateX(0); }
+}
+
+/* Dust motes (CSS particles) */
+.day-particles {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 230, 180, 0.7) 0, transparent 55%),
+    radial-gradient(circle, rgba(255, 245, 220, 0.6) 0, transparent 55%),
+    radial-gradient(circle, rgba(255, 220, 190, 0.5) 0, transparent 55%);
+  background-size: 6px 6px, 5px 5px, 4px 4px;
+  background-position: 10% 90%, 50% 80%, 80% 85%;
+  opacity: 0.35;
+  animation: dayParticlesRise 40s linear infinite;
+}
+
+@keyframes dayParticlesRise {
+  0% {
+    transform: translateY(10px);
+    background-position: 10% 90%, 50% 80%, 80% 85%;
+  }
+  50% {
+    transform: translateY(-10px);
+    background-position: 12% 70%, 48% 60%, 78% 65%;
+  }
+  100% {
+    transform: translateY(10px);
+    background-position: 10% 90%, 50% 80%, 80% 85%;
+  }
+}
+
+/* Sunbeam behind hero crown */
+.day-sunbeam {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  transform: translateX(-50%);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  filter: blur(1px);
+  animation: daySunbeamFloat 60s ease-in-out infinite;
+}
+
+@keyframes daySunbeamFloat {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(12px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+/* Cloud parallax */
+.day-cloud {
+  position: absolute;
+  width: 420px;
+  height: auto;
+  opacity: 0.32;
+  filter: blur(0.4px);
+}
+
+.day-cloud-1 {
+  top: 120px;
+  left: -120px;
+  animation: dayCloudDrift1 120s linear infinite;
+}
+
+.day-cloud-2 {
+  top: 220px;
+  right: -140px;
+  animation: dayCloudDrift2 150s linear infinite;
+}
+
+@keyframes dayCloudDrift1 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(220px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes dayCloudDrift2 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-260px); }
+  100% { transform: translateX(0); }
+}
+
+/* Slight tuning for smaller screens */
+@media (max-width: 768px) {
+  .day-sunbeam {
+    width: 700px;
+    height: 700px;
+    top: -20px;
+    opacity: 0.5;
+  }
+
+  .day-cloud {
+    width: 320px;
+    opacity: 0.28;
+  }
+
+  .day-cloud-1 { top: 140px; }
+  .day-cloud-2 { top: 240px; }
+}
 
 /* ============================================================
    UNIVERSAL CROWN GLOW + SHIMMER (ALL crowns, all pages)
