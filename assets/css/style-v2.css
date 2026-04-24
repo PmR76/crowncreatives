@@ -413,3 +413,35 @@ body[data-theme="night"] .card {
     width: 90%;
   }
 }
+
+/* ============================================================
+   UNIVERSAL CROWN GLOW + SHIMMER (ALL crowns, all pages)
+   ============================================================ */
+
+img[src*="crown"],
+svg[src*="crown"],
+img[class*="crown"],
+svg[class*="crown"] {
+  filter: drop-shadow(0 0 12px var(--glow-day));
+  animation: crownShimmer 6s ease-in-out infinite;
+  transition: filter 0.4s ease;
+}
+
+body[data-theme="night"] img[src*="crown"],
+body[data-theme="night"] svg[src*="crown"],
+body[data-theme="night"] img[class*="crown"],
+body[data-theme="night"] svg[class*="crown"] {
+  filter: drop-shadow(0 0 16px var(--glow-night));
+}
+
+@keyframes crownShimmer {
+  0% { filter: drop-shadow(0 0 10px var(--glow-day)); }
+  50% { filter: drop-shadow(0 0 18px var(--glow-day)); }
+  100% { filter: drop-shadow(0 0 10px var(--glow-day)); }
+}
+
+@keyframes crownShimmerNight {
+  0% { filter: drop-shadow(0 0 12px var(--glow-night)); }
+  50% { filter: drop-shadow(0 0 22px var(--glow-night)); }
+  100% { filter: drop-shadow(0 0 12px var(--glow-night)); }
+}
