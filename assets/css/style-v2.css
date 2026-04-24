@@ -568,6 +568,198 @@ body[data-theme="night"] .day-cloud {
   .day-cloud-1 { top: 140px; }
   .day-cloud-2 { top: 240px; }
 }
+/* ============================================================
+   NIGHT REALM — Cosmic Nebula Background Engine (Stage‑3)
+   ============================================================ */
+
+.realm-engine {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Base layer visibility */
+.realm-day,
+.realm-night {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 600ms ease-in-out;
+}
+
+/* Default: day visible, night hidden */
+.realm-night { opacity: 0; }
+
+/* Theme toggle */
+body[data-theme="night"] .realm-night { opacity: 1; }
+body[data-theme="night"] .realm-day { opacity: 0; }
+
+/* ------------------------------------------------------------
+   Cosmic Gradient Backdrop
+   ------------------------------------------------------------ */
+.night-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(79, 91, 255, 0.9) 0%, transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(255, 111, 216, 0.8) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, #1b1740 0%, #050313 70%);
+  opacity: 0.95;
+}
+
+/* ------------------------------------------------------------
+   Nebula Fog Layers
+   ------------------------------------------------------------ */
+.night-nebula {
+  position: absolute;
+  width: 160%;
+  height: 160%;
+  filter: blur(40px);
+  opacity: 0.55;
+  background: radial-gradient(circle, rgba(255, 111, 216, 0.35) 0%, transparent 60%);
+  transform: translate3d(0, 0, 0);
+}
+
+.night-nebula--left {
+  top: -20%;
+  left: -30%;
+}
+
+.night-nebula--right {
+  bottom: -10%;
+  right: -25%;
+}
+
+/* ------------------------------------------------------------
+   Starfield Layers
+   ------------------------------------------------------------ */
+.night-stars {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.7;
+}
+
+.night-stars--base {
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.7) 0%, transparent 50%),
+    radial-gradient(1px 1px at 80% 30%, rgba(255,255,255,0.6) 0%, transparent 50%),
+    radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.5) 0%, transparent 50%);
+}
+
+.night-stars--twinkle {
+  background-image:
+    radial-gradient(1.5px 1.5px at 15% 40%, rgba(255,255,255,0.9) 0%, transparent 55%),
+    radial-gradient(1.5px 1.5px at 65% 20%, rgba(255,255,255,0.8) 0%, transparent 55%),
+    radial-gradient(1.5px 1.5px at 75% 75%, rgba(255,255,255,0.85) 0%, transparent 55%);
+  animation: night-twinkle 4s ease-in-out infinite alternate;
+}
+
+/* ------------------------------------------------------------
+   Aurora Ribbons
+   ------------------------------------------------------------ */
+.night-aurora {
+  position: absolute;
+  width: 140%;
+  height: 60%;
+  filter: blur(18px);
+  opacity: 0.7;
+  background: linear-gradient(
+    120deg,
+    rgba(120,255,214,0.0) 0%,
+    rgba(120,255,214,0.6) 35%,
+    rgba(120,255,214,0.0) 70%
+  );
+  transform-origin: center;
+}
+
+.night-aurora--top {
+  top: -10%;
+  left: -20%;
+  transform: rotate(-4deg);
+}
+
+.night-aurora--diagonal {
+  bottom: 0;
+  right: -25%;
+  transform: rotate(8deg);
+}
+
+/* ------------------------------------------------------------
+   Shooting Stars
+   ------------------------------------------------------------ */
+.night-shooting-star {
+  position: absolute;
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.0) 0%,
+    rgba(255,255,255,0.9) 40%,
+    rgba(255,255,255,0.0) 100%
+  );
+  opacity: 0;
+  transform-origin: left center;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
+  animation: night-shooting-star 9s linear infinite;
+}
+
+.night-shooting-star--one {
+  top: 18%;
+  left: 10%;
+  transform: rotate(-18deg);
+  animation-delay: 1.5s;
+}
+
+.night-shooting-star--two {
+  top: 40%;
+  right: 5%;
+  transform: rotate(-28deg);
+  animation-delay: 5.2s;
+}
+
+/* ------------------------------------------------------------
+   Animations
+   ------------------------------------------------------------ */
+@keyframes night-twinkle {
+  0% { opacity: 0.4; transform: scale(1); }
+  100% { opacity: 0.9; transform: scale(1.03); }
+}
+
+@keyframes night-shooting-star {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,0,0) rotate(var(--shoot-angle, -20deg));
+  }
+  5% { opacity: 1; }
+  25% {
+    opacity: 0;
+    transform: translate3d(260px,120px,0) rotate(var(--shoot-angle, -20deg));
+  }
+  100% { opacity: 0; }
+}
+
+/* ------------------------------------------------------------
+   Mobile Tuning
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .night-nebula {
+    filter: blur(32px);
+    opacity: 0.5;
+  }
+
+  .night-aurora {
+    height: 50%;
+    filter: blur(16px);
+  }
+
+  .night-shooting-star {
+    width: 90px;
+  }
+}
 
 /* ============================================================
    UNIVERSAL CROWN GLOW + SHIMMER (ALL crowns, all pages)
