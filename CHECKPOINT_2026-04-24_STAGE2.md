@@ -13,3 +13,4 @@ This checkpoint captures the fully stable Stage‑2 build, including:
 
 ## Notes
 This release is safe for rollback and serves as the official Stage‑2 milestone.
+ 
