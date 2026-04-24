@@ -6,7 +6,7 @@ baseurl: "/crowncreatives"
 
 markdown: kramdown
 
-version: 13
+version: 14
 
 include:
   - _pages
