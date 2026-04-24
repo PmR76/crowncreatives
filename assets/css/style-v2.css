@@ -713,8 +713,8 @@ body[data-theme="night"] .magic-gallery-tile {
 }
 /* HEADER THEME TOGGLE — MATCH FOOTER ICON SIZE */
 .theme-toggle .theme-icon {
-  width: 72px;
-  height: 72px;
+  width: 52px;
+  height: 52px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -726,8 +726,8 @@ body[data-theme="night"] .magic-gallery-tile {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 72px;
-  height: 72px;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
