@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Crown Creatives</title>
 
-  {% include head.html %}
+  {% seo %}
 
-<body id="top" class="{{ page.layout }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style-v2.css' | relative_url }}">
+</head>
 
-  <!-- HEADER -->
+<body data-theme="day">
+
+  <!-- ============================================================
+       DAY REALM LAYERS (Stage‑3 — Warm Enchanting Fantasy)
+       ============================================================ -->
+  <div class="realm-day">
+    <div class="day-gradient"></div>
+    <div class="day-haze"></div>
+    <div class="day-particles"></div>
+
+    <!-- Sunbeam behind hero crown -->
+    <svg class="day-sunbeam" viewBox="0 0 800 800" aria-hidden="true">
+      <defs>
+        <radialGradient id="sunbeamGradient" cx="50%" cy="0%" r="80%">
+          <stop offset="0%" stop-color="#FFEFD0" stop-opacity="0.9" />
+          <stop offset="40%" stop-color="#FFE0B3" stop-opacity="0.45" />
+          <stop offset="100%" stop-color="#FFD6C9" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      <circle cx="400" cy="120" r="380" fill="url(#sunbeamGradient)" />
+    </svg>
+
+    <!-- Soft parallax clouds -->
+    <svg class="day-cloud day-cloud-1" viewBox="0 0 400 200" aria-hidden="true">
+      <defs>
+        <linearGradient id="cloudGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7" />
+          <stop offset="100%" stop-color="#F3E8FF" stop-opacity="0.4" />
+        </linearGradient>
+      </defs>
+      <ellipse cx="120" cy="110" rx="120" ry="55" fill="url(#cloudGrad1)" />
+      <ellipse cx="220" cy="95" rx="110" ry="50" fill="url(#cloudGrad1)" />
+      <ellipse cx="300" cy="115" rx="90" ry="45" fill="url(#cloudGrad1)" />
+    </svg>
+
+    <svg class="day-cloud day-cloud-2" viewBox="0 0 400 200" aria-hidden="true">
+      <defs>
+        <linearGradient id="cloudGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.65" />
+          <stop offset="100%" stop-color="#DDEBFF" stop-opacity="0.35" />
+        </linearGradient>
+      </defs>
+      <ellipse cx="180" cy="105" rx="130" ry="60" fill="url(#cloudGrad2)" />
+      <ellipse cx="270" cy="95" rx="100" ry="50" fill="url(#cloudGrad2)" />
+    </svg>
+  </div>
+  <!-- ============================================================ -->
+
   {% include header.html %}
 
-  <!-- HERO SECTION (HOME PAGE ONLY) -->
-  {% if page.layout == "home" %}
-    {{ content | split:"<!-- PAGE CONTENT -->" | first }}
-  {% endif %}
-
-  <!-- MAIN CONTENT -->
-  <main class="site-content">
-    {% if page.layout == "home" %}
-      {{ content | split:"<!-- PAGE CONTENT -->" | last }}
-    {% else %}
-      {{ content }}
-    {% endif %}
+  <main>
+    {{ content }}
   </main>
 
-  <!-- INSPIRATION TICKER -->
-  <div class="inspiration-ticker">
-    <div class="ticker-track">
-      <span>✨ Imagination becomes reality ✨ Creativity is your superpower ✨ Every idea is a spark of magic ✨ Artistry transforms the ordinary ✨ Believe boldly — create fearlessly ✨</span>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
   {% include footer.html %}
-
-  <!-- THEME + HERO GALLERY ENGINE -->
-  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/hero-gallery.js' | relative_url }}"></script>
 
 </body>
 </html>
