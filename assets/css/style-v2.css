@@ -413,9 +413,9 @@ body[data-theme="night"] .card {
     width: 90%;
   }
 }
+
 /* ============================================================
    DAY REALM — WARM ENCHANTING FANTASY (MEDIUM WARMTH)
-   CSS + SVG HYBRID
    ============================================================ */
 
 .realm-day {
@@ -426,7 +426,6 @@ body[data-theme="night"] .card {
   z-index: -2;
 }
 
-/* Base enchanted gradient */
 .day-gradient {
   position: absolute;
   inset: 0;
@@ -441,7 +440,6 @@ body[data-theme="night"] .card {
   transition: opacity 1.2s ease;
 }
 
-/* Hide Day Realm when in night mode */
 body[data-theme="night"] .day-gradient,
 body[data-theme="night"] .day-haze,
 body[data-theme="night"] .day-particles,
@@ -451,7 +449,6 @@ body[data-theme="night"] .day-cloud {
   pointer-events: none;
 }
 
-/* Haze layer */
 .day-haze {
   position: absolute;
   inset: -10%;
@@ -469,7 +466,6 @@ body[data-theme="night"] .day-cloud {
   100% { transform: translateX(0); }
 }
 
-/* Dust motes (CSS particles) */
 .day-particles {
   position: absolute;
   inset: 0;
@@ -498,7 +494,6 @@ body[data-theme="night"] .day-cloud {
   }
 }
 
-/* Sunbeam behind hero crown */
 .day-sunbeam {
   position: absolute;
   top: -40px;
@@ -518,7 +513,6 @@ body[data-theme="night"] .day-cloud {
   100% { transform: translateX(-50%) translateY(0); }
 }
 
-/* Cloud parallax */
 .day-cloud {
   position: absolute;
   width: 420px;
@@ -551,7 +545,6 @@ body[data-theme="night"] .day-cloud {
   100% { transform: translateX(0); }
 }
 
-/* Slight tuning for smaller screens */
 @media (max-width: 768px) {
   .day-sunbeam {
     width: 700px;
@@ -568,6 +561,7 @@ body[data-theme="night"] .day-cloud {
   .day-cloud-1 { top: 140px; }
   .day-cloud-2 { top: 240px; }
 }
+
 /* ============================================================
    NIGHT REALM — Cosmic Nebula Background Engine (Stage‑3)
    ============================================================ */
@@ -579,7 +573,6 @@ body[data-theme="night"] .day-cloud {
   pointer-events: none;
 }
 
-/* Base layer visibility */
 .realm-day,
 .realm-night {
   position: absolute;
@@ -589,277 +582,14 @@ body[data-theme="night"] .day-cloud {
   transition: opacity 600ms ease-in-out;
 }
 
-/* Default: day visible, night hidden */
 .realm-night { opacity: 0; }
 
-/* Theme toggle */
 body[data-theme="night"] .realm-night { opacity: 1; }
 body[data-theme="night"] .realm-day { opacity: 0; }
 
-/* ------------------------------------------------------------
-   Cosmic Gradient Backdrop
-   ------------------------------------------------------------ */
 .night-gradient {
   position: absolute;
   inset: 0;
   background:
     radial-gradient(circle at 20% 20%, rgba(79, 91, 255, 0.9) 0%, transparent 45%),
-    radial-gradient(circle at 80% 30%, rgba(255, 111, 216, 0.8) 0%, transparent 50%),
-    radial-gradient(circle at 50% 80%, #1b1740 0%, #050313 70%);
-  opacity: 0.95;
-}
-
-/* ------------------------------------------------------------
-   Nebula Fog Layers
-   ------------------------------------------------------------ */
-.night-nebula {
-  position: absolute;
-  width: 160%;
-  height: 160%;
-  filter: blur(40px);
-  opacity: 0.55;
-  background: radial-gradient(circle, rgba(255, 111, 216, 0.35) 0%, transparent 60%);
-  transform: translate3d(0, 0, 0);
-}
-
-.night-nebula--left {
-  top: -20%;
-  left: -30%;
-}
-
-.night-nebula--right {
-  bottom: -10%;
-  right: -25%;
-}
-
-/* ------------------------------------------------------------
-   Starfield Layers
-   ------------------------------------------------------------ */
-.night-stars {
-  position: absolute;
-  inset: 0;
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  opacity: 0.7;
-}
-
-.night-stars--base {
-  background-image:
-    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.7) 0%, transparent 50%),
-    radial-gradient(1px 1px at 80% 30%, rgba(255,255,255,0.6) 0%, transparent 50%),
-    radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.5) 0%, transparent 50%);
-}
-
-.night-stars--twinkle {
-  background-image:
-    radial-gradient(1.5px 1.5px at 15% 40%, rgba(255,255,255,0.9) 0%, transparent 55%),
-    radial-gradient(1.5px 1.5px at 65% 20%, rgba(255,255,255,0.8) 0%, transparent 55%),
-    radial-gradient(1.5px 1.5px at 75% 75%, rgba(255,255,255,0.85) 0%, transparent 55%);
-  animation: night-twinkle 4s ease-in-out infinite alternate;
-}
-
-/* ------------------------------------------------------------
-   Aurora Ribbons
-   ------------------------------------------------------------ */
-.night-aurora {
-  position: absolute;
-  width: 140%;
-  height: 60%;
-  filter: blur(18px);
-  opacity: 0.7;
-  background: linear-gradient(
-    120deg,
-    rgba(120,255,214,0.0) 0%,
-    rgba(120,255,214,0.6) 35%,
-    rgba(120,255,214,0.0) 70%
-  );
-  transform-origin: center;
-}
-
-.night-aurora--top {
-  top: -10%;
-  left: -20%;
-  transform: rotate(-4deg);
-}
-
-.night-aurora--diagonal {
-  bottom: 0;
-  right: -25%;
-  transform: rotate(8deg);
-}
-
-/* ------------------------------------------------------------
-   Shooting Stars
-   ------------------------------------------------------------ */
-.night-shooting-star {
-  position: absolute;
-  width: 140px;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    rgba(255,255,255,0.0) 0%,
-    rgba(255,255,255,0.9) 40%,
-    rgba(255,255,255,0.0) 100%
-  );
-  opacity: 0;
-  transform-origin: left center;
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
-  animation: night-shooting-star 9s linear infinite;
-}
-
-.night-shooting-star--one {
-  top: 18%;
-  left: 10%;
-  transform: rotate(-18deg);
-  animation-delay: 1.5s;
-}
-
-.night-shooting-star--two {
-  top: 40%;
-  right: 5%;
-  transform: rotate(-28deg);
-  animation-delay: 5.2s;
-}
-
-/* ------------------------------------------------------------
-   Animations
-   ------------------------------------------------------------ */
-@keyframes night-twinkle {
-  0% { opacity: 0.4; transform: scale(1); }
-  100% { opacity: 0.9; transform: scale(1.03); }
-}
-
-@keyframes night-shooting-star {
-  0% {
-    opacity: 0;
-    transform: translate3d(0,0,0) rotate(var(--shoot-angle, -20deg));
-  }
-  5% { opacity: 1; }
-  25% {
-    opacity: 0;
-    transform: translate3d(260px,120px,0) rotate(var(--shoot-angle, -20deg));
-  }
-  100% { opacity: 0; }
-}
-
-/* ------------------------------------------------------------
-   Mobile Tuning
-   ------------------------------------------------------------ */
-@media (max-width: 768px) {
-  .night-nebula {
-    filter: blur(32px);
-    opacity: 0.5;
-  }
-
-  .night-aurora {
-    height: 50%;
-    filter: blur(16px);
-  }
-
-  .night-shooting-star {
-    width: 90px;
-  }
-}
-/* ============================================================
-   NIGHT MODE — Crown Glow, Shimmer, Header, Footer, Toggle
-   ============================================================ */
-
-/* ------------------------------------------------------------
-   1. Crown Glow — Night Mode
-   ------------------------------------------------------------ */
-body[data-theme="night"] .header-crown-img {
-  filter:
-    drop-shadow(0 0 12px rgba(150, 120, 255, 0.85))
-    drop-shadow(0 0 28px rgba(120, 90, 255, 0.55))
-    drop-shadow(0 0 48px rgba(90, 60, 255, 0.35));
-  transition: filter 600ms ease-in-out;
-}
-
-/* ------------------------------------------------------------
-   2. Crown Shimmer — Night Mode Animation
-   ------------------------------------------------------------ */
-body[data-theme="night"] .header-crown-img {
-  animation: crown-shimmer-night 6s ease-in-out infinite;
-}
-
-@keyframes crown-shimmer-night {
-  0%   { filter: drop-shadow(0 0 10px rgba(150,120,255,0.6)); }
-  50%  { filter: drop-shadow(0 0 22px rgba(180,150,255,0.9)); }
-  100% { filter: drop-shadow(0 0 10px rgba(150,120,255,0.6)); }
-}
-
-/* ------------------------------------------------------------
-   3. Footer Rune Icons — Night Mode Glow
-   ------------------------------------------------------------ */
-body[data-theme="night"] .footer-icon,
-body[data-theme="night"] .footer-rune,
-body[data-theme="night"] .footer-icon-circle {
-  filter:
-    drop-shadow(0 0 8px rgba(150,120,255,0.8))
-    drop-shadow(0 0 18px rgba(120,90,255,0.5));
-  transition: filter 600ms ease-in-out;
-}
-
-/* ------------------------------------------------------------
-   4. Header Text — Night Mode Color Shift
-   ------------------------------------------------------------ */
-body[data-theme="night"] .site-title,
-body[data-theme="night"] .site-tagline {
-  color: #dcd6ff;
-  text-shadow: 0 0 6px rgba(120, 90, 255, 0.4);
-  transition: color 400ms ease, text-shadow 400ms ease;
-}
-
-/* ------------------------------------------------------------
-   5. Navigation — Night Mode Tuning
-   ------------------------------------------------------------ */
-body[data-theme="night"] .site-nav a {
-  color: #e8e3ff;
-}
-
-body[data-theme="night"] .site-nav a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(150,120,255,0.6);
-}
-
-/* ------------------------------------------------------------
-   6. Theme Toggle Icon — Night Mode Glow
-   ------------------------------------------------------------ */
-body[data-theme="night"] .theme-icon {
-  filter:
-    drop-shadow(0 0 6px rgba(150,120,255,0.8))
-    drop-shadow(0 0 14px rgba(120,90,255,0.5));
-  transition: filter 400ms ease;
-}
-
-/* ============================================================
-   UNIVERSAL CROWN GLOW + SHIMMER (ALL crowns, all pages)
-   ============================================================ */
-
-img[src*="crown"],
-svg[src*="crown"],
-img[class*="crown"],
-svg[class*="crown"] {
-  filter: drop-shadow(0 0 12px var(--glow-day));
-  animation: crownShimmer 6s ease-in-out infinite;
-  transition: filter 0.4s ease;
-}
-
-body[data-theme="night"] img[src*="crown"],
-body[data-theme="night"] svg[src*="crown"],
-body[data-theme="night"] img[class*="crown"],
-body[data-theme="night"] svg[class*="crown"] {
-  filter: drop-shadow(0 0 16px var(--glow-night));
-}
-
-@keyframes crownShimmer {
-  0% { filter: drop-shadow(0 0 10px var(--glow-day)); }
-  50% { filter: drop-shadow(0 0 18px var(--glow-day)); }
-  100% { filter: drop-shadow(0 0 10px var(--glow-day)); }
-}
-
-@keyframes crownShimmerNight {
-  0% { filter: drop-shadow(0 0 12px var(--glow-night)); }
-  50% { filter: drop-shadow(0 0 22px var(--glow-night)); }
-  100% { filter: drop-shadow(0 0 12px var(--glow-night)); }
-}
+    radial-gradient(circle at 80%
