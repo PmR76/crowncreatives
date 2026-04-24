@@ -3,25 +3,23 @@ layout: default
 title: Gallery
 ---
 
-<section class="gallery-page">
-  <header class="gallery-header">
-    <h1>Gallery</h1>
-    <p class="gallery-tagline">
-      A living collection of enchanted creations, drifting between day and night.
-    </p>
-  </header>
+<section class="full-gallery">
 
-  <div id="magic-gallery" class="magic-gallery-grid"></div>
+  <h1 class="gallery-title">Gallery</h1>
+  <p class="gallery-subtitle">A living collection of Crown Creatives imagery</p>
 
-  <div id="magic-lightbox" class="magic-lightbox" aria-hidden="true">
-    <div class="magic-lightbox-backdrop"></div>
-    <div class="magic-lightbox-content">
-      <button class="magic-lightbox-close" aria-label="Close">&times;</button>
-      <img class="magic-lightbox-image" src="" alt="">
-      <button class="magic-lightbox-prev" aria-label="Previous">&#10094;</button>
-      <button class="magic-lightbox-next" aria-label="Next">&#10095;</button>
-    </div>
+  <!-- Masonry Grid -->
+  <div id="masonry-gallery" class="masonry-grid"></div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox hidden">
+    <span id="lightbox-close" class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="">
+    <div id="lightbox-prev" class="lightbox-nav prev">&#10094;</div>
+    <div id="lightbox-next" class="lightbox-nav next">&#10095;</div>
   </div>
+
 </section>
 
-<script src="/crown-creatives-v2/assets/js/gallery.js"></script>
+<script src="{{ '/assets/js/gallery-autoscan.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/gallery.css' | relative_url }}">
