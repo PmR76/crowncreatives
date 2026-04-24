@@ -760,6 +760,77 @@ body[data-theme="night"] .realm-day { opacity: 0; }
     width: 90px;
   }
 }
+/* ============================================================
+   NIGHT MODE — Crown Glow, Shimmer, Header, Footer, Toggle
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. Crown Glow — Night Mode
+   ------------------------------------------------------------ */
+body[data-theme="night"] .header-crown-img {
+  filter:
+    drop-shadow(0 0 12px rgba(150, 120, 255, 0.85))
+    drop-shadow(0 0 28px rgba(120, 90, 255, 0.55))
+    drop-shadow(0 0 48px rgba(90, 60, 255, 0.35));
+  transition: filter 600ms ease-in-out;
+}
+
+/* ------------------------------------------------------------
+   2. Crown Shimmer — Night Mode Animation
+   ------------------------------------------------------------ */
+body[data-theme="night"] .header-crown-img {
+  animation: crown-shimmer-night 6s ease-in-out infinite;
+}
+
+@keyframes crown-shimmer-night {
+  0%   { filter: drop-shadow(0 0 10px rgba(150,120,255,0.6)); }
+  50%  { filter: drop-shadow(0 0 22px rgba(180,150,255,0.9)); }
+  100% { filter: drop-shadow(0 0 10px rgba(150,120,255,0.6)); }
+}
+
+/* ------------------------------------------------------------
+   3. Footer Rune Icons — Night Mode Glow
+   ------------------------------------------------------------ */
+body[data-theme="night"] .footer-icon,
+body[data-theme="night"] .footer-rune,
+body[data-theme="night"] .footer-icon-circle {
+  filter:
+    drop-shadow(0 0 8px rgba(150,120,255,0.8))
+    drop-shadow(0 0 18px rgba(120,90,255,0.5));
+  transition: filter 600ms ease-in-out;
+}
+
+/* ------------------------------------------------------------
+   4. Header Text — Night Mode Color Shift
+   ------------------------------------------------------------ */
+body[data-theme="night"] .site-title,
+body[data-theme="night"] .site-tagline {
+  color: #dcd6ff;
+  text-shadow: 0 0 6px rgba(120, 90, 255, 0.4);
+  transition: color 400ms ease, text-shadow 400ms ease;
+}
+
+/* ------------------------------------------------------------
+   5. Navigation — Night Mode Tuning
+   ------------------------------------------------------------ */
+body[data-theme="night"] .site-nav a {
+  color: #e8e3ff;
+}
+
+body[data-theme="night"] .site-nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(150,120,255,0.6);
+}
+
+/* ------------------------------------------------------------
+   6. Theme Toggle Icon — Night Mode Glow
+   ------------------------------------------------------------ */
+body[data-theme="night"] .theme-icon {
+  filter:
+    drop-shadow(0 0 6px rgba(150,120,255,0.8))
+    drop-shadow(0 0 14px rgba(120,90,255,0.5));
+  transition: filter 400ms ease;
+}
 
 /* ============================================================
    UNIVERSAL CROWN GLOW + SHIMMER (ALL crowns, all pages)
