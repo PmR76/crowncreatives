@@ -13,50 +13,89 @@
 <body data-theme="day">
 
   <!-- ============================================================
-       DAY REALM LAYERS (Stage‑3 — Warm Enchanting Fantasy)
+       REALM BACKGROUND ENGINE (Day + Night)
        ============================================================ -->
-  <div class="realm-day">
-    <div class="day-gradient"></div>
-    <div class="day-haze"></div>
-    <div class="day-particles"></div>
+  <div class="realm-engine" aria-hidden="true">
 
-    <!-- Sunbeam behind hero crown -->
-    <svg class="day-sunbeam" viewBox="0 0 800 800" aria-hidden="true">
-      <defs>
-        <radialGradient id="sunbeamGradient" cx="50%" cy="0%" r="80%">
-          <stop offset="0%" stop-color="#FFEFD0" stop-opacity="0.9" />
-          <stop offset="40%" stop-color="#FFE0B3" stop-opacity="0.45" />
-          <stop offset="100%" stop-color="#FFD6C9" stop-opacity="0" />
-        </radialGradient>
-      </defs>
-      <circle cx="400" cy="120" r="380" fill="url(#sunbeamGradient)" />
-    </svg>
+    <!-- ===========================
+         DAY REALM (EXISTING)
+         =========================== -->
+    <div class="realm-day">
+      <div class="day-gradient"></div>
+      <div class="day-haze"></div>
+      <div class="day-particles"></div>
 
-    <!-- Soft parallax clouds -->
-    <svg class="day-cloud day-cloud-1" viewBox="0 0 400 200" aria-hidden="true">
-      <defs>
-        <linearGradient id="cloudGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7" />
-          <stop offset="100%" stop-color="#F3E8FF" stop-opacity="0.4" />
-        </linearGradient>
-      </defs>
-      <ellipse cx="120" cy="110" rx="120" ry="55" fill="url(#cloudGrad1)" />
-      <ellipse cx="220" cy="95" rx="110" ry="50" fill="url(#cloudGrad1)" />
-      <ellipse cx="300" cy="115" rx="90" ry="45" fill="url(#cloudGrad1)" />
-    </svg>
+      <!-- Sunbeam behind hero crown -->
+      <svg class="day-sunbeam" viewBox="0 0 800 800" aria-hidden="true">
+        <defs>
+          <radialGradient id="sunbeamGradient" cx="50%" cy="0%" r="80%">
+            <stop offset="0%" stop-color="#FFEFD0" stop-opacity="0.9" />
+            <stop offset="40%" stop-color="#FFE0B3" stop-opacity="0.45" />
+            <stop offset="100%" stop-color="#FFD6C9" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <circle cx="400" cy="120" r="380" fill="url(#sunbeamGradient)" />
+      </svg>
 
-    <svg class="day-cloud day-cloud-2" viewBox="0 0 400 200" aria-hidden="true">
-      <defs>
-        <linearGradient id="cloudGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.65" />
-          <stop offset="100%" stop-color="#DDEBFF" stop-opacity="0.35" />
-        </linearGradient>
-      </defs>
-      <ellipse cx="180" cy="105" rx="130" ry="60" fill="url(#cloudGrad2)" />
-      <ellipse cx="270" cy="95" rx="100" ry="50" fill="url(#cloudGrad2)" />
-    </svg>
+      <!-- Soft parallax clouds -->
+      <svg class="day-cloud day-cloud-1" viewBox="0 0 400 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="cloudGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7" />
+            <stop offset="100%" stop-color="#F3E8FF" stop-opacity="0.4" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="120" cy="110" rx="120" ry="55" fill="url(#cloudGrad1)" />
+        <ellipse cx="220" cy="95" rx="110" ry="50" fill="url(#cloudGrad1)" />
+        <ellipse cx="300" cy="115" rx="90" ry="45" fill="url(#cloudGrad1)" />
+      </svg>
+
+      <svg class="day-cloud day-cloud-2" viewBox="0 0 400 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="cloudGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.65" />
+            <stop offset="100%" stop-color="#DDEBFF" stop-opacity="0.35" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="180" cy="105" rx="130" ry="60" fill="url(#cloudGrad2)" />
+        <ellipse cx="270" cy="95" rx="100" ry="50" fill="url(#cloudGrad2)" />
+      </svg>
+    </div>
+    <!-- /DAY REALM -->
+
+    <!-- ===========================
+         NIGHT REALM (NEW)
+         =========================== -->
+    <div class="realm-night">
+
+      <!-- Cosmic gradient backdrop -->
+      <div class="night-gradient"></div>
+
+      <!-- Nebula fog -->
+      <div class="night-nebula night-nebula--left"></div>
+      <div class="night-nebula night-nebula--right"></div>
+
+      <!-- Starfield base layer -->
+      <div class="night-stars night-stars--base"></div>
+
+      <!-- Twinkling stars overlay -->
+      <div class="night-stars night-stars--twinkle"></div>
+
+      <!-- Aurora ribbons -->
+      <div class="night-aurora night-aurora--top"></div>
+      <div class="night-aurora night-aurora--diagonal"></div>
+
+      <!-- Shooting stars -->
+      <div class="night-shooting-star night-shooting-star--one"></div>
+      <div class="night-shooting-star night-shooting-star--two"></div>
+
+    </div>
+    <!-- /NIGHT REALM -->
+
   </div>
   <!-- ============================================================ -->
+  <!-- /REALM BACKGROUND ENGINE -->
+
 
   {% include header.html %}
 
