@@ -310,10 +310,10 @@ body[data-theme="night"] .card {
 }
 
 /* -------------------------------------------------- */
-/* FOOTER — ICONS + BACK TO TOP                       */
+/* FOOTER — CLEAN MODERNISED VERSION                  */
 /* -------------------------------------------------- */
 
-.site-footer {
+.footer {
   padding: 2rem 0 2.5rem 0;
   text-align: center;
   background: transparent;
@@ -324,18 +324,32 @@ body[data-theme="night"] .card {
 .footer-icons img {
   width: 48px;
   height: auto;
+  display: inline-block;
+  transition: opacity 0.3s ease;
 }
 
-.footer-backtotop img {
-  width: 48px;
-  cursor: pointer;
+.footer-icons img:hover {
+  opacity: 0.75;
 }
 
-.footer-backtotop {
+.footer-top {
   position: absolute;
   right: 1rem;
   bottom: 0.5rem;
   z-index: 50;
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.3s ease;
+}
+
+.footer-top img {
+  width: 48px;
+  height: auto;
+  display: block;
+}
+
+.footer-top:hover {
+  transform: translateY(-4px);
+  opacity: 0.85;
 }
 
 /* -------------------------------------------------- */
