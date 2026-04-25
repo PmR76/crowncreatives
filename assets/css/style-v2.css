@@ -134,15 +134,10 @@ body[data-theme="night"] {
 }
 
 /* -------------------------------------------------- */
-/* HEADER — LOGO, CROWN, NAV                          */
+/* HEADER — CLEAN MODERNISED VERSION                  */
 /* -------------------------------------------------- */
 
-.header-crown-img {
-  width: 160px;
-  height: auto;
-  display: block;
-}
-
+/* Header container */
 .site-header {
   position: relative;
   text-align: center;
@@ -150,6 +145,7 @@ body[data-theme="night"] {
   background: transparent;
 }
 
+/* Crown wrapper */
 .header-crown-wrapper {
   margin-top: 0.5rem;
   display: flex;
@@ -157,24 +153,38 @@ body[data-theme="night"] {
   max-height: 120px;
 }
 
+/* Crown container */
 .header-crown {
   position: relative;
   width: 160px;
   height: auto;
 }
 
+/* Crown images (day/night) */
+.header-crown-img {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+/* Layered crown fade engine */
 .crown {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   opacity: 0;
-  transition: opacity 8s ease-in-out;
   pointer-events: none;
+  transition: opacity 8s ease-in-out;
 }
 
-body[data-theme="day"] .crown-day { opacity: 1; }
-body[data-theme="night"] .crown-night { opacity: 1; }
+body[data-theme="day"] .crown-day {
+  opacity: 1;
+}
+
+body[data-theme="night"] .crown-night {
+  opacity: 1;
+}
 
 /* Navigation */
 .site-nav ul {
@@ -191,11 +201,13 @@ body[data-theme="night"] .crown-night { opacity: 1; }
   color: inherit;
   font-weight: 700;
   font-size: 1.1rem;
-  transition: opacity 0.3s ease;
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  transition: opacity 0.3s ease;
 }
 
-.site-nav a:hover { opacity: 0.7; }
+.site-nav a:hover {
+  opacity: 0.7;
+}
 
 /* -------------------------------------------------- */
 /* HERO SECTION — CROWN + HERO GALLERY LANES          */
