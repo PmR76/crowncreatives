@@ -1,20 +1,33 @@
 <header class="site-header">
 
-<button class="theme-toggle" aria-label="Toggle theme">
-  <img 
-    src="{{ '/assets/icons/sun-moon-magic.svg' | relative_url }}"
-    alt=""
-    class="theme-icon"
-  >
-</button>
-
-  <!-- HEADER CROWN -->
-  <div class="header-crown-wrapper">
+  <!-- THEME TOGGLE -->
+  <button class="theme-toggle" aria-label="Toggle theme">
     <img 
-      src="{{ '/assets/img/head-crown.svg' | relative_url }}" 
-      alt="Crown Creatives Crown" 
-      class="header-crown-img"
+      src="{{ '/assets/icons/sun-moon-magic.svg' | relative_url }}"
+      alt=""
+      class="theme-icon"
     >
+  </button>
+
+  <!-- HEADER CROWN (DAY + NIGHT) -->
+  <div class="header-crown-wrapper">
+    <div class="header-crown">
+
+      <!-- DAY CROWN -->
+      <img 
+        src="{{ '/assets/img/day-crown.svg' | relative_url }}" 
+        alt="Day Crown" 
+        class="crown crown-day"
+      >
+
+      <!-- NIGHT CROWN -->
+      <img 
+        src="{{ '/assets/img/night-crown.svg' | relative_url }}" 
+        alt="Night Crown" 
+        class="crown crown-night"
+      >
+
+    </div>
   </div>
 
   <!-- TITLE + TAGLINE -->
