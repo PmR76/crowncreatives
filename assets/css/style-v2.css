@@ -351,11 +351,11 @@ body[data-theme="night"] .card {
   transform: translateY(-4px);
   opacity: 0.85;
 }
-
 /* -------------------------------------------------- */
-/* RESPONSIVE TUNING — TABLET / MOBILE                */
+/* RESPONSIVE TUNING — CLEAN MODERNISED VERSION       */
 /* -------------------------------------------------- */
 
+/* Tablet (≤1024px) */
 @media (max-width: 1024px) {
   .home-crown {
     width: 300px;
@@ -372,6 +372,7 @@ body[data-theme="night"] .card {
   }
 }
 
+/* Mobile (≤768px) */
 @media (max-width: 768px) {
   .home-crown {
     width: 85vw;
@@ -404,6 +405,7 @@ body[data-theme="night"] .card {
   }
 }
 
+/* Small Mobile (≤480px) */
 @media (max-width: 480px) {
   .home-crown {
     width: 200px;
@@ -427,6 +429,7 @@ body[data-theme="night"] .card {
     width: 90%;
   }
 }
+
 
 /* ============================================================
    DAY REALM — CLEAN MODERNISED VERSION
