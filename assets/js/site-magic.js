@@ -1,27 +1,40 @@
-// site-magic.js — theme, back-to-top, hero lanes, masonry gallery
+// site-magic.js — unified magic engine
+// Theme, crown morph, background, hero lanes, masonry gallery, lightbox, back-to-top
 
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
 
   /* ---------------------------------------------
-   * THEME ENGINE — SUMMER DAY DEFAULT
+   * THEME ENGINE — DAY / NIGHT + CROWN MORPH
    * ------------------------------------------- */
   const themeToggle =
     document.querySelector('.theme-toggle') ||
     document.getElementById('theme-toggle') ||
-    document.querySelector('.header-toggle, .toggle-icon, [data-role="theme-toggle"]');
+    document.querySelector('[data-role="theme-toggle"]');
+
+  const heroCrown = document.getElementById('hero-crown');
 
   function applyTheme(theme) {
     const safe = theme === 'night' ? 'night' : 'day';
     body.setAttribute('data-theme', safe);
     localStorage.setItem('cc-theme', safe);
+
+    // Crown morph: swap SVG based on theme
+    if (heroCrown) {
+      if (safe === 'day') {
+        heroCrown.src = '/assets/icons/day-crown.svg';
+        heroCrown.alt = 'Crown Creatives — Day';
+      } else {
+        heroCrown.src = '/assets/icons/night-crown.svg';
+        heroCrown.alt = 'Crown Creatives — Night';
+      }
+    }
   }
 
   function getInitialTheme() {
     const saved = localStorage.getItem('cc-theme');
     if (saved === 'day' || saved === 'night') return saved;
-    // Force SUMMER DAY as default
-    return 'day';
+    return 'day'; // summer day default
   }
 
   applyTheme(getInitialTheme());
@@ -60,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------------------------------------
-   * HERO LANES — HOME ONLY
+   * HERO LANES — HOME ONLY (body_class: home)
    * ------------------------------------------- */
   if (body.classList.contains('home')) {
     const leftLane = document.querySelector('.gallery-left');
@@ -191,6 +204,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape') closeLightbox();
     });
   }
+
+  /* ---------------------------------------------
+   * (Optional) TICKER — purely structural here
+   * ------------------------------------------- */
+  // If your CSS animates .ticker-track, no JS is required.
 });
 
 /* ---------------------------------------------
