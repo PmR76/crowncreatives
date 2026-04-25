@@ -850,5 +850,37 @@ body[data-theme="night"] .header-crown-img {
     width: 220px;
     height: auto;
 }
+/* ------------------------------------------------------------ */
+/* HERO GALLERY — BASE STRUCTURE                               */
+/* ------------------------------------------------------------ */
+
+.hero-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto 2rem auto;
+    position: relative;
+    z-index: 4;
+}
+
+.gallery-left,
+.gallery-right {
+    width: 48%;
+    min-height: 180px; /* ensures gallery is visible */
+    background: rgba(255,255,255,0.05); /* subtle placeholder */
+    border-radius: 8px;
+    overflow: hidden;
+}
+/* ------------------------------------------------------------ */
+/* BACK TO TOP — ALIGN RIGHT                                   */
+/* ------------------------------------------------------------ */
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem; /* aligns with header toggle + social icons */
+    z-index: 999;
+}
 
 
