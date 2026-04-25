@@ -341,43 +341,44 @@ body[data-theme="night"] .crown-night {
   line-height: 1.55;
   opacity: 0.9;
 }
-
 /* -------------------------------------------------- */
-/* INSPIRATION TICKER — SCROLLING MANTRA              */
+/* INSPIRATION TICKER — CLEAN MODERNISED VERSION      */
 /* -------------------------------------------------- */
 
-.inspiration-ticker {
+.ticker-wrapper {
   width: 100%;
   overflow: hidden;
-  margin: 3rem 0 1.5rem 0;
-  padding: 0.7rem 0;
   position: relative;
-  background: rgba(255, 255, 255, 0.08);
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(6px);
-  white-space: nowrap;
+  margin: 3rem 0 2rem 0;
+  padding: 0.5rem 0;
+  z-index: 20;
 }
 
-.ticker-track {
+/* The moving line */
+.ticker {
   display: inline-block;
   white-space: nowrap;
-  will-change: transform;
-  animation: tickerScroll 35s linear infinite;
-  padding-left: 100%;
-}
-
-.ticker-track span {
-  display: inline-block;
-  padding-right: 4rem;
-  font-size: 1.15rem;
-  letter-spacing: 1px;
+  animation: tickerScroll 28s linear infinite;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  opacity: 0.95;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
+/* Duplicate spans for seamless loop */
+.ticker span {
+  display: inline-block;
+  padding-right: 4rem;
+}
+
+/* Continuous left-to-right movement */
 @keyframes tickerScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* -------------------------------------------------- */
