@@ -1,6 +1,6 @@
 /* -------------------------------------------------- */
 /* CROWN CREATIVES — MASTER STYLESHEET (style‑v3.css) */
-/* Clean, modern, conflict‑free rebuild 25 April      */
+/* Clean, modern, conflict‑free rebuild               */
 /* -------------------------------------------------- */
 
 /* -------------------------------------------------- */
@@ -27,7 +27,13 @@ body {
   text-align: center;
   letter-spacing: 0.4px;
   position: relative;
-  transition: background 1s ease, color 1s ease;
+  opacity: 0;
+  animation: pageFadeIn 1.2s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* -------------------------------------------------- */
@@ -37,33 +43,6 @@ body {
 :root {
   --glow-day: rgba(255, 210, 140, 0.9);
   --glow-night: rgba(140, 190, 255, 0.9);
-}
-
-/* -------------------------------------------------- */
-/* THEME BACKGROUNDS — HYBRID MAGIC (Option C)        */
-/* -------------------------------------------------- */
-
-/* DAY — warm fantasy gradient (simplified) */
-body[data-theme="day"] {
-  background: radial-gradient(
-    circle at top,
-    #ffffff 0%,
-    #f7f0ff 35%,
-    #e3f0ff 70%,
-    #dbe7ff 100%
-  );
-  color: #222;
-}
-
-/* NIGHT — simplified cosmic nebula */
-body[data-theme="night"] {
-  background: radial-gradient(
-    circle at center,
-    #0a0a1a 0%,
-    #141428 50%,
-    #1a1a2e 100%
-  );
-  color: #f2f2f2;
 }
 
 /* -------------------------------------------------- */
@@ -118,10 +97,8 @@ body[data-theme="night"] {
   position: relative;
   text-align: center;
   padding-top: 3rem;
-  background: transparent;
 }
 
-/* Header crown wrapper */
 .header-crown-wrapper {
   display: flex;
   justify-content: center;
@@ -129,7 +106,6 @@ body[data-theme="night"] {
   margin: 0.5rem 0;
 }
 
-/* Header crown (static, 120px) */
 .header-crown-img {
   width: 120px;
   height: auto;
@@ -137,21 +113,18 @@ body[data-theme="night"] {
   transition: filter 1s ease, opacity 1s ease;
 }
 
-/* DAY glow */
 body[data-theme="day"] .header-crown-img {
   filter:
     drop-shadow(0 0 6px rgba(255, 215, 0, 0.55))
     drop-shadow(0 0 12px rgba(255, 215, 0, 0.35));
 }
 
-/* NIGHT glow */
 body[data-theme="night"] .header-crown-img {
   filter:
     drop-shadow(0 0 8px rgba(180, 0, 255, 0.75))
     drop-shadow(0 0 16px rgba(180, 0, 255, 0.55));
 }
 
-/* Navigation */
 .site-nav ul {
   list-style: none;
   padding: 0;
@@ -175,7 +148,7 @@ body[data-theme="night"] .header-crown-img {
 }
 
 /* -------------------------------------------------- */
-/* HERO SECTION — CLEAN CENTRED CROWN (Modernised)    */
+/* HERO SECTION                                       */
 /* -------------------------------------------------- */
 
 .home-hero {
@@ -188,7 +161,6 @@ body[data-theme="night"] .header-crown-img {
   z-index: 5;
 }
 
-/* Crown wrapper (centred, no absolute positioning) */
 .hero-crown-wrapper {
   display: flex;
   justify-content: center;
@@ -196,33 +168,20 @@ body[data-theme="night"] .header-crown-img {
   margin-bottom: 1.5rem;
 }
 
-/* Hero crown (220px, clean fade) */
 .home-crown {
   width: 220px;
   height: auto;
   transition: opacity 1s ease;
 }
 
-/* DAY crown visible */
-body[data-theme="day"] .crown-day {
-  opacity: 1;
-}
+body[data-theme="day"] .crown-day { opacity: 1; }
+body[data-theme="day"] .crown-night { opacity: 0; }
 
-body[data-theme="day"] .crown-night {
-  opacity: 0;
-}
-
-/* NIGHT crown visible */
-body[data-theme="night"] .crown-day {
-  opacity: 0;
-}
-
-body[data-theme="night"] .crown-night {
-  opacity: 1;
-}
+body[data-theme="night"] .crown-day { opacity: 0; }
+body[data-theme="night"] .crown-night { opacity: 1; }
 
 /* -------------------------------------------------- */
-/* HERO GALLERY — STATIC MODERN PANELS (Gallery 1)    */
+/* HERO GALLERY                                       */
 /* -------------------------------------------------- */
 
 .hero-gallery {
@@ -245,15 +204,15 @@ body[data-theme="night"] .crown-night {
   position: relative;
 }
 
-/* Admin images inside lanes */
 .gallery-left img,
 .gallery-right img {
   width: 100%;
   height: auto;
   display: block;
 }
+
 /* -------------------------------------------------- */
-/* HOME CARDS — CLEAN MODERNISED VERSION              */
+/* HOME CARDS                                         */
 /* -------------------------------------------------- */
 
 .home-cards {
@@ -307,7 +266,7 @@ body[data-theme="night"] .crown-night {
 }
 
 /* -------------------------------------------------- */
-/* INSPIRATION TICKER — CLEAN MODERNISED VERSION      */
+/* TICKER                                             */
 /* -------------------------------------------------- */
 
 .ticker-wrapper {
@@ -340,13 +299,12 @@ body[data-theme="night"] .crown-night {
 }
 
 /* -------------------------------------------------- */
-/* FOOTER — CLEAN MODERNISED VERSION                  */
+/* FOOTER                                             */
 /* -------------------------------------------------- */
 
 .footer {
   padding: 2rem 0 2.5rem 0;
   text-align: center;
-  background: transparent;
   margin-top: 3rem;
   position: relative;
 }
@@ -363,7 +321,7 @@ body[data-theme="night"] .crown-night {
 }
 
 /* -------------------------------------------------- */
-/* BACK TO TOP — FIXED + ALIGNED                      */
+/* BACK TO TOP                                        */
 /* -------------------------------------------------- */
 
 .back-to-top {
@@ -387,7 +345,7 @@ body[data-theme="night"] .crown-night {
 }
 
 /* -------------------------------------------------- */
-/* ICON MAGIC — DAY + NIGHT GLOW                      */
+/* ICON MAGIC                                         */
 /* -------------------------------------------------- */
 
 .site-nav a,
@@ -402,282 +360,57 @@ body[data-theme="day"] .footer-icons img:hover {
 
 body[data-theme="night"] .site-nav a:hover,
 body[data-theme="night"] .footer-icons img:hover {
-  filter: drop-shadow(0 0 8px rgba(180,0,255,0.8));
-}
-
-/* -------------------------------------------------- */
-/* RESPONSIVE TUNING — CLEAN + MODERN                 */
+  filter: drop-shadow(0 0/* -------------------------------------------------- */
+/* HYBRID BACKGROUND MAGIC — CLEAN, MERGED, WORKING   */
 /* -------------------------------------------------- */
 
-@media (max-width: 1024px) {
-  .hero-gallery {
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-gallery {
-    flex-direction: column;
-  }
-
-  .gallery-left,
-  .gallery-right {
-    min-height: 160px;
-  }
-
-  .home-cards {
-    margin-top: 3rem;
-    gap: 1.5rem;
-  }
-
-  .card {
-    width: 85%;
-    padding: 1.5rem;
-  }
-
-  .site-nav ul {
-    gap: 1rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-crown {
-    width: 180px;
-  }
-
-  .gallery-left,
-  .gallery-right {
-    min-height: 140px;
-  }
-
-  .card {
-    width: 90%;
-  }
-}
-/* -------------------------------------------------- */
-/* HYBRID BACKGROUND MAGIC — FIXED + BALANCED         */
-/* -------------------------------------------------- */
-
-/* DAY — bright, warm, clearly visible */
-.realm-day {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-background:
-  radial-gradient(circle at top left, #ffffff 0%, #fff9e6 25%, transparent 55%),
-  radial-gradient(circle at top right, #ffe9c4 0%, #ffd59c 30%, transparent 60%),
-  radial-gradient(circle at bottom, #c9f3ff 0%, #a8e4ff 40%, #8fd0ff 80%);
-  );
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-/* NIGHT — softened nebula (no more deep purple void) */
+.realm-day,
 .realm-night {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  transition: opacity 1s ease;
+}
+
+/* DAY — bright summer gradient + haze drift */
+.realm-day {
+  background:
+    radial-gradient(circle at top left, #ffffff 0%, #fff9e6 25%, transparent 55%),
+    radial-gradient(circle at top right, #ffe9c4 0%, #ffd59c 30%, transparent 60%),
+    radial-gradient(circle at bottom, #c9f3ff 0%, #a8e4ff 40%, #8fd0ff 80%);
+  opacity: 1;
+  animation: dayHazeFloat 40s ease-in-out infinite;
+}
+
+/* NIGHT — softened nebula + breathing pulse */
+.realm-night {
   background:
     radial-gradient(circle at 30% 30%, rgba(120,0,255,0.18), transparent 60%),
     radial-gradient(circle at 70% 70%, rgba(0,120,255,0.15), transparent 70%),
     radial-gradient(circle at center, rgba(15,15,35,0.85), rgba(10,10,25,1));
   opacity: 0;
-  transition: opacity 1s ease;
+  animation: nightNebulaPulse 30s ease-in-out infinite;
 }
 
 /* Theme switching */
-body[data-theme="night"] .realm-night { opacity: 1; }
-body[data-theme="night"] .realm-day { opacity: 0; }
-
-body[data-theme="day"] .realm-night { opacity: 0; }
 body[data-theme="day"] .realm-day { opacity: 1; }
+body[data-theme="day"] .realm-night { opacity: 0; }
 
-/* -------------------------------------------------- */
-/* OPTIONAL POLISH — MICRO‑MAGIC + ELEGANT MOTION     */
-/* -------------------------------------------------- */
+body[data-theme="night"] .realm-day { opacity: 0; }
+body[data-theme="night"] .realm-night { opacity: 1; }
 
-/* -------------------------------------------------- */
-/* SOFT PAGE FADE-IN                                  */
-/* -------------------------------------------------- */
-
-body {
-  opacity: 0;
-  animation: pageFadeIn 1.2s ease forwards;
-}
-
-@keyframes pageFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* -------------------------------------------------- */
-/* HERO CROWN — SOFT SHIMMER                          */
-/* -------------------------------------------------- */
-
-.home-crown {
-  position: relative;
-  z-index: 2;
-}
-
-/* Shimmer overlay */
-.home-crown::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255,255,255,0.35) 45%,
-    transparent 90%
-  );
-  opacity: 0;
-  transform: translateX(-120%);
-  pointer-events: none;
-  transition: opacity 0.6s ease;
-}
-
-/* Subtle shimmer on hover */
-.hero-crown-wrapper:hover .home-crown::after {
-  opacity: 1;
-  animation: crownShimmer 1.8s ease;
-}
-
-@keyframes crownShimmer {
-  0%   { transform: translateX(-120%); }
-  100% { transform: translateX(120%); }
-}
-
-/* -------------------------------------------------- */
-/* GALLERY PANELS — SOFT DEPTH + HOVER GLOW           */
-/* -------------------------------------------------- */
-
-.gallery-left,
-.gallery-right {
-  transition:
-    box-shadow 0.4s ease,
-    background 0.4s ease,
-    transform 0.4s ease;
-}
-
-.gallery-left:hover,
-.gallery-right:hover {
-  background: rgba(255, 255, 255, 0.18);
-  transform: translateY(-4px);
-  box-shadow:
-    0 0 14px rgba(255,255,255,0.25),
-    inset 0 0 10px rgba(255,255,255,0.15);
-}
-
-/* -------------------------------------------------- */
-/* CARDS — SOFT FLOATING SHADOW                       */
-/* -------------------------------------------------- */
-
-.card {
-  position: relative;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(
-    circle at center,
-    rgba(255,255,255,0.12),
-    transparent 70%
-  );
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.card:hover::after {
-  opacity: 1;
-}
-
-/* -------------------------------------------------- */
-/* TICKER — SOFT GLOW PULSE                           */
-/* -------------------------------------------------- */
-
-.ticker {
-  animation:
-    tickerScroll 28s linear infinite,
-    tickerGlow 4s ease-in-out infinite;
-}
-
-@keyframes tickerGlow {
-  0%   { text-shadow: 0 0 4px rgba(255,255,255,0.3); }
-  50%  { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
-  100% { text-shadow: 0 0 4px rgba(255,255,255,0.3); }
-}
-
-/* -------------------------------------------------- */
-/* FOOTER ICONS — SOFT FLOAT                          */
-/* -------------------------------------------------- */
-
-.footer-icons img {
-  transition:
-    transform 0.35s ease,
-    opacity 0.35s ease,
-    filter 0.35s ease;
-}
-
-.footer-icons img:hover {
-  transform: translateY(-4px);
-}
-
-/* -------------------------------------------------- */
-/* BACK TO TOP — GENTLE FLOAT                         */
-/* -------------------------------------------------- */
-
-.back-to-top {
-  animation: backToTopFloat 4s ease-in-out infinite;
-}
-
-@keyframes backToTopFloat {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-4px); }
-  100% { transform: translateY(0); }
-}
-
-/* -------------------------------------------------- */
-/* HEADER CROWN — SUBTLE BREATHING GLOW               */
-/* -------------------------------------------------- */
-
-.header-crown-img {
-  animation: headerGlowPulse 6s ease-in-out infinite;
-}
-
-@keyframes headerGlowPulse {
-  0%   { filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
-  50%  { filter: drop-shadow(0 0 10px rgba(255,255,255,0.5)); }
-  100% { filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
-}
-
-/* -------------------------------------------------- */
-/* HYBRID MAGIC — SOFT MOTION                         */
-/* -------------------------------------------------- */
-
-/* Day haze drift */
-.realm-day {
-  animation: dayHazeFloat 40s ease-in-out infinite;
-}
-
+/* Animations */
 @keyframes dayHazeFloat {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(12px); }
   100% { transform: translateY(0); }
 }
 
-/* Night nebula breathing */
-.realm-night {
-  animation: nightNebulaPulse 30s ease-in-out infinite;
-}
-
 @keyframes nightNebulaPulse {
   0%   { opacity: 0.85; }
   50%  { opacity: 1; }
   100% { opacity: 0.85; }
+}
+ 8px rgba(180,0,255,0.8));
 }
