@@ -782,5 +782,32 @@ body[data-theme="night"] .realm-day {
   opacity: 0.9;
   transition: opacity 1.2s ease;
 }
+/* ------------------------------------------------------------ */
+/* HEADER CROWN — FIX SIZE + SPACING (20% smaller)              */
+/* ------------------------------------------------------------ */
+
+.header-crown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-crown img.crown {
+    width: 120px;      /* 20% smaller than before */
+    height: auto;
+    transform: none !important;   /* prevent hero scaling */
+    filter: none !important;      /* prevent hero glow */
+    opacity: 1 !important;        /* always visible */
+}
+
+.site-title {
+    margin-top: 0.5rem;   /* push title down slightly */
+}
+
+.site-tagline {
+    margin-top: 0.2rem;
+}
 
 
