@@ -10,7 +10,7 @@ permalink: /gallery/
   <!-- Masonry container (JS will autoscan + populate) -->
   <div id="masonry-gallery" class="masonry-gallery"></div>
 
-  <!-- Lightbox (JS controls visibility + navigation) -->
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox hidden">
     <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
     <button id="lightbox-prev" class="lightbox-prev" aria-label="Previous">&#10094;</button>
