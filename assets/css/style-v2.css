@@ -809,5 +809,28 @@ body[data-theme="night"] .realm-day {
 .site-tagline {
     margin-top: 0.2rem;
 }
+/* ------------------------------------------------------------ */
+/* HEADER CROWN — RESTORE GLOW (DAY + NIGHT)                    */
+/* ------------------------------------------------------------ */
+
+.header-crown-img {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0.5rem auto 0.5rem auto;
+    transition: filter 1s ease, opacity 1s ease;
+}
+
+/* DAY MODE — soft golden glow */
+body[data-theme="day"] .header-crown-img {
+    filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.55))
+            drop-shadow(0 0 12px rgba(255, 215, 0, 0.35));
+}
+
+/* NIGHT MODE — neon purple glow */
+body[data-theme="night"] .header-crown-img {
+    filter: drop-shadow(0 0 8px rgba(180, 0, 255, 0.75))
+            drop-shadow(0 0 16px rgba(180, 0, 255, 0.55));
+}
 
 
