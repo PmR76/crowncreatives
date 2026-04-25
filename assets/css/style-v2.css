@@ -457,45 +457,46 @@ body[data-theme="night"] .footer-icons img:hover {
 }
 
 /* -------------------------------------------------- */
-/* HYBRID BACKGROUND MAGIC — OPTION C                 */
-/* (Simplified day fantasy + simplified night nebula) */
+/* HYBRID BACKGROUND MAGIC — FIXED + BALANCED         */
 /* -------------------------------------------------- */
 
-/* DAY MAGIC — soft fantasy haze */
+/* DAY — brighter, warm fantasy gradient */
 .realm-day {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
   background: radial-gradient(circle at top center,
-    rgba(255,255,255,0.6),
-    rgba(255,255,255,0)
+    rgba(255, 245, 225, 1) 0%,
+    rgba(255, 230, 200, 0.9) 35%,
+    rgba(255, 240, 255, 0.8) 70%,
+    rgba(240, 245, 255, 0.9) 100%
   );
   opacity: 1;
   transition: opacity 1s ease;
 }
 
-/* NIGHT MAGIC — simplified nebula */
+/* NIGHT — softened nebula */
 .realm-night {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(circle at 30% 30%, rgba(120,0,255,0.35), transparent 60%),
-    radial-gradient(circle at 70% 70%, rgba(0,120,255,0.25), transparent 70%),
-    radial-gradient(circle at center, rgba(0,0,0,0.9), rgba(0,0,0,1));
+    radial-gradient(circle at 30% 30%, rgba(120,0,255,0.25), transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(0,120,255,0.20), transparent 70%),
+    radial-gradient(circle at center, rgba(10,10,30,0.85), rgba(10,10,30,1));
   opacity: 0;
   transition: opacity 1s ease;
 }
 
-body[data-theme="night"] .realm-night {
-  opacity: 1;
-}
+/* Theme switching */
+body[data-theme="night"] .realm-night { opacity: 1; }
+body[data-theme="night"] .realm-day { opacity: 0; }
 
-body[data-theme="night"] .realm-day {
-  opacity: 0;
-}
+body[data-theme="day"] .realm-night { opacity: 0; }
+body[data-theme="day"] .realm-day { opacity: 1; }
+
 /* -------------------------------------------------- */
 /* OPTIONAL POLISH — MICRO‑MAGIC + ELEGANT MOTION     */
 /* -------------------------------------------------- */
