@@ -9,14 +9,14 @@ layout: none
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
 
-  <!-- SITE CSS (version bump for cache) -->
+  <!-- SITE CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style-v3.css?v=11' | relative_url }}">
 </head>
 
 <body class="{{ page.body_class }}" data-theme="day">
 
   <!-- ========================================================= -->
-  <!-- BACKGROUND MAGIC LAYERS (DAY + NIGHT REALMS)              -->
+  <!-- BACKGROUND MAGIC LAYERS                                   -->
   <!-- ========================================================= -->
   <div class="realm-day"></div>
   <div class="realm-night"></div>
@@ -25,6 +25,17 @@ layout: none
   <!-- HEADER                                                    -->
   <!-- ========================================================= -->
   {% include header.html %}
+
+  <!-- ========================================================= -->
+  <!-- TICKER                                                    -->
+  <!-- ========================================================= -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">Welcome to Crown Creatives</span>
+      <span class="ticker-item">Magical design for magical brands</span>
+      <span class="ticker-item">Explore the gallery</span>
+    </div>
+  </div>
 
   <!-- ========================================================= -->
   <!-- PAGE CONTENT                                              -->
@@ -46,7 +57,7 @@ layout: none
   </div>
 
   <!-- ========================================================= -->
-  <!-- THEME TOGGLE SCRIPT                                       -->
+  <!-- UNIFIED JS ENGINE                                         -->
   <!-- ========================================================= -->
   <script src="/assets/js/site-magic.js"></script>
 
