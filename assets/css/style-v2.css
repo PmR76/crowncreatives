@@ -882,5 +882,59 @@ body[data-theme="night"] .header-crown-img {
     right: 2rem; /* aligns with header toggle + social icons */
     z-index: 999;
 }
+/* ------------------------------------------------------------ */
+/* BACKGROUND MAGIC — DAY + NIGHT REALMS                       */
+/* ------------------------------------------------------------ */
+
+.realm-day,
+.realm-night {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* DAY MAGIC */
+.realm-day {
+    background: radial-gradient(circle at center, rgba(255,255,255,0.6), rgba(255,255,255,0));
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+/* NIGHT MAGIC */
+.realm-night {
+    background: radial-gradient(circle at center, rgba(150,0,255,0.4), rgba(0,0,0,0.9));
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body[data-theme="night"] .realm-night {
+    opacity: 1;
+}
+
+body[data-theme="night"] .realm-day {
+    opacity: 0;
+}
+/* ------------------------------------------------------------ */
+/* ICON MAGIC                                                   */
+/* ------------------------------------------------------------ */
+
+.site-nav a,
+.footer-social a {
+    transition: filter 0.4s ease;
+}
+
+body[data-theme="day"] .site-nav a:hover,
+body[data-theme="day"] .footer-social a:hover {
+    filter: drop-shadow(0 0 6px rgba(255,215,0,0.6));
+}
+
+body[data-theme="night"] .site-nav a:hover,
+body[data-theme="night"] .footer-social a:hover {
+    filter: drop-shadow(0 0 8px rgba(180,0,255,0.8));
+}
 
 
