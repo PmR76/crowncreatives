@@ -113,42 +113,20 @@ body {
   transition: filter 1s ease, opacity 1s ease;
 }
 
-body[data-theme="day"] .header-crown-img {
-  filter:
-    drop-shadow(0 0 6px rgba(255, 215, 0, 0.55))
-    drop-shadow(0 0 12px rgba(255, 215, 0, 0.35));
+/* Glow + shimmer for ANY crown icon */
+img[src*="crown"] {
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+  animation: crownGlow 6s ease-in-out infinite;
 }
 
-body[data-theme="night"] .header-crown-img {
-  filter:
-    drop-shadow(0 0 8px rgba(180, 0, 255, 0.75))
-    drop-shadow(0 0 16px rgba(180, 0, 255, 0.55));
-}
-
-.site-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
-  transition: opacity 0.3s ease;
-}
-
-.site-nav a:hover {
-  opacity: 0.7;
+@keyframes crownGlow {
+  0%   { filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
+  50%  { filter: drop-shadow(0 0 12px rgba(255,255,255,0.6)); }
+  100% { filter: drop-shadow(0 0 4px rgba(255,255,255,0.3)); }
 }
 
 /* -------------------------------------------------- */
-/* HERO SECTION                                       */
+/* HERO SECTION — 50% Larger Crown + Centered         */
 /* -------------------------------------------------- */
 
 .home-hero {
@@ -169,11 +147,12 @@ body[data-theme="night"] .header-crown-img {
 }
 
 .home-crown {
-  width: 220px;
+  width: 330px; /* 50% larger than 220px */
   height: auto;
-  transition: opacity 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
+/* Smooth fade between day/night crowns */
 body[data-theme="day"] .crown-day { opacity: 1; }
 body[data-theme="day"] .crown-night { opacity: 0; }
 
@@ -181,7 +160,7 @@ body[data-theme="night"] .crown-day { opacity: 0; }
 body[data-theme="night"] .crown-night { opacity: 1; }
 
 /* -------------------------------------------------- */
-/* HERO GALLERY                                       */
+/* HERO GALLERY — RESTORED                            */
 /* -------------------------------------------------- */
 
 .hero-gallery {
@@ -212,7 +191,7 @@ body[data-theme="night"] .crown-night { opacity: 1; }
 }
 
 /* -------------------------------------------------- */
-/* HOME CARDS                                         */
+/* CARDS — CLEAN MODERN                               */
 /* -------------------------------------------------- */
 
 .home-cards {
@@ -251,22 +230,8 @@ body[data-theme="night"] .crown-night { opacity: 1; }
     inset 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-.card h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.55;
-  opacity: 0.9;
-}
-
 /* -------------------------------------------------- */
-/* TICKER                                             */
+/* TICKER — CLEAN + GLOW                               */
 /* -------------------------------------------------- */
 
 .ticker-wrapper {
@@ -281,16 +246,10 @@ body[data-theme="night"] .crown-night { opacity: 1; }
 .ticker {
   display: inline-block;
   white-space: nowrap;
-  animation: tickerScroll 28s linear infinite;
+  animation: tickerScroll 28s linear infinite, tickerGlow 4s ease-in-out infinite;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
   opacity: 0.95;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
-}
-
-.ticker span {
-  display: inline-block;
-  padding-right: 4rem;
 }
 
 @keyframes tickerScroll {
@@ -298,8 +257,14 @@ body[data-theme="night"] .crown-night { opacity: 1; }
   100% { transform: translateX(100%); }
 }
 
+@keyframes tickerGlow {
+  0%   { text-shadow: 0 0 4px rgba(255,255,255,0.3); }
+  50%  { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+  100% { text-shadow: 0 0 4px rgba(255,255,255,0.3); }
+}
+
 /* -------------------------------------------------- */
-/* FOOTER                                             */
+/* FOOTER + BACK TO TOP RESTORED                      */
 /* -------------------------------------------------- */
 
 .footer {
@@ -320,10 +285,7 @@ body[data-theme="night"] .crown-night { opacity: 1; }
   opacity: 0.75;
 }
 
-/* -------------------------------------------------- */
-/* BACK TO TOP                                        */
-/* -------------------------------------------------- */
-
+/* Back to top restored */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -331,6 +293,7 @@ body[data-theme="night"] .crown-night { opacity: 1; }
   z-index: 999;
   cursor: pointer;
   transition: transform 0.25s ease, opacity 0.3s ease;
+  animation: backToTopFloat 4s ease-in-out infinite;
 }
 
 .back-to-top img {
@@ -339,29 +302,13 @@ body[data-theme="night"] .crown-night { opacity: 1; }
   display: block;
 }
 
-.back-to-top:hover {
-  transform: translateY(-4px);
-  opacity: 0.85;
+@keyframes backToTopFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
 }
-
 /* -------------------------------------------------- */
-/* ICON MAGIC                                         */
-/* -------------------------------------------------- */
-
-.site-nav a,
-.footer-icons img {
-  transition: filter 0.4s ease;
-}
-
-body[data-theme="day"] .site-nav a:hover,
-body[data-theme="day"] .footer-icons img:hover {
-  filter: drop-shadow(0 0 6px rgba(255,215,0,0.6));
-}
-
-body[data-theme="night"] .site-nav a:hover,
-body[data-theme="night"] .footer-icons img:hover {
-  filter: drop-shadow(0 0/* -------------------------------------------------- */
-/* HYBRID BACKGROUND MAGIC — CLEAN, MERGED, WORKING   */
+/* HYBRID BACKGROUND MAGIC — SUMMER DAY + NIGHT SKY   */
 /* -------------------------------------------------- */
 
 .realm-day,
@@ -373,7 +320,7 @@ body[data-theme="night"] .footer-icons img:hover {
   transition: opacity 1s ease;
 }
 
-/* DAY — bright summer gradient + haze drift */
+/* SUMMER DAY — warm, bright, magical */
 .realm-day {
   background:
     radial-gradient(circle at top left, #ffffff 0%, #fff9e6 25%, transparent 55%),
@@ -383,7 +330,7 @@ body[data-theme="night"] .footer-icons img:hover {
   animation: dayHazeFloat 40s ease-in-out infinite;
 }
 
-/* NIGHT — softened nebula + breathing pulse */
+/* NIGHT — soft nebula, deep fantasy */
 .realm-night {
   background:
     radial-gradient(circle at 30% 30%, rgba(120,0,255,0.18), transparent 60%),
@@ -411,6 +358,4 @@ body[data-theme="night"] .realm-night { opacity: 1; }
   0%   { opacity: 0.85; }
   50%  { opacity: 1; }
   100% { opacity: 0.85; }
-}
- 8px rgba(180,0,255,0.8));
 }
