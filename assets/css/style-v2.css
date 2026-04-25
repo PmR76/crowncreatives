@@ -4,27 +4,35 @@
 /* -------------------------------------------------- */
 
 /* -------------------------------------------------- */
-/* GLOBAL FONT — CINZEL DECORATIVE                    */
+/* GLOBAL FONT — CINZEL DECORATIVE (Modernised)       */
 /* -------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 
+/* Base document rules */
 html,
 body {
-  overflow-x: hidden;
   width: 100%;
   max-width: 100%;
   min-height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
+/* Global typography + transitions */
 body {
   font-family: 'Cinzel Decorative', serif;
   text-align: center;
-  margin: 0;
-  padding: 0;
   letter-spacing: 0.4px;
   position: relative;
   transition: background 1s ease, color 1s ease;
+}
+
+/* Global glow variables */
+:root {
+  --glow-day: rgba(255, 210, 140, 0.9);
+  --glow-night: rgba(140, 190, 255, 0.9);
 }
 
 /* ============================================================
