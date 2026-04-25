@@ -27,3 +27,16 @@ Simple rule:
 stage‑2 = build  
 preview = test  
 main = publish
+
+Mapping list: 
+.site-footer        → .footer
+.footer-icons       → .footer-icons
+.footer-backtotop   → .footer-top
+.realm-day        → .realm-day   (unchanged)
+.day-gradient     → .day-gradient
+.day-haze         → .day-haze
+.day-particles    → .day-particles
+.day-sunbeam      → .day-sunbeam
+.day-cloud        → .day-cloud
+.day-cloud-1      → .day-cloud-1
+.day-cloud-2      → .day-cloud-2
