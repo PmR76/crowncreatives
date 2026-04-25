@@ -455,37 +455,36 @@ body[data-theme="night"] .footer-icons img:hover {
     width: 90%;
   }
 }
-
 /* -------------------------------------------------- */
 /* HYBRID BACKGROUND MAGIC — FIXED + BALANCED         */
 /* -------------------------------------------------- */
 
-/* DAY — brighter, warm fantasy gradient */
+/* DAY — bright, warm, clearly visible */
 .realm-day {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
   background: radial-gradient(circle at top center,
-    rgba(255, 245, 225, 1) 0%,
-    rgba(255, 230, 200, 0.9) 35%,
-    rgba(255, 240, 255, 0.8) 70%,
-    rgba(240, 245, 255, 0.9) 100%
+    rgba(255, 250, 235, 1) 0%,
+    rgba(255, 240, 215, 0.95) 35%,
+    rgba(255, 245, 255, 0.9) 70%,
+    rgba(240, 245, 255, 0.95) 100%
   );
   opacity: 1;
   transition: opacity 1s ease;
 }
 
-/* NIGHT — softened nebula */
+/* NIGHT — softened nebula (no more deep purple void) */
 .realm-night {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(circle at 30% 30%, rgba(120,0,255,0.25), transparent 60%),
-    radial-gradient(circle at 70% 70%, rgba(0,120,255,0.20), transparent 70%),
-    radial-gradient(circle at center, rgba(10,10,30,0.85), rgba(10,10,30,1));
+    radial-gradient(circle at 30% 30%, rgba(120,0,255,0.18), transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(0,120,255,0.15), transparent 70%),
+    radial-gradient(circle at center, rgba(15,15,35,0.85), rgba(10,10,25,1));
   opacity: 0;
   transition: opacity 1s ease;
 }
