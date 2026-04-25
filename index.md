@@ -34,6 +34,22 @@ show_hero_crown: true
   </div>
 
 </section>
+<section class="home-hero">
+
+  <div class="hero-crown-wrapper">
+    <img 
+      src="{{ '/assets/img/crown-day.svg' | relative_url }}" 
+      alt="Day Crown" 
+      class="home-crown crown-day"
+    >
+    <img 
+      src="{{ '/assets/img/crown-night.svg' | relative_url }}" 
+      alt="Night Crown" 
+      class="home-crown crown-night"
+    >
+  </div>
+
+</section>
 
 <!-- ========================================================= -->
 <!-- HOME CARDS                                                -->
