@@ -45,7 +45,7 @@ body {
 }
 
 /* ============================================================
-   HEADER THEME TOGGLE — 52px VERSION (FINAL)
+   THEME TOGGLE — CLEAN MODERNISED VERSION (52px)
    ============================================================ */
 
 .theme-toggle {
@@ -57,15 +57,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
   border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+
+  /* Glassy orb */
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(8px);
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  /* Soft magical glow */
   box-shadow:
     0 0 12px rgba(255, 255, 255, 0.5),
     inset 0 0 8px rgba(255, 255, 255, 0.3);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
 .theme-toggle:hover {
@@ -82,14 +90,17 @@ body {
     inset 0 0 6px rgba(255, 255, 255, 0.2);
 }
 
-.theme-toggle .theme-icon {
+/* Icon inside the orb */
+.theme-icon {
   width: 52px;
   height: 52px;
   pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.3s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.3s ease;
 }
 
-.theme-toggle .theme-icon:hover {
+.theme-icon:hover {
   transform: scale(1.08);
 }
 
