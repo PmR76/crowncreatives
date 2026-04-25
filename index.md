@@ -1,6 +1,7 @@
 ---
 layout: home
 show_hero_crown: true
+title: Crown Creatives
 ---
 
 <!-- ========================================================= -->
@@ -12,24 +13,24 @@ show_hero_crown: true
   <!-- HERO CROWN (DAY + NIGHT) -->
   <div class="hero-crown-wrapper">
     <img 
-      src="{{ '/assets/img/crown-day.svg' | relative_url }}" 
+      src="{{ '/assets/img/day-crown.svg' | relative_url }}" 
       alt="Day Crown" 
       class="home-crown crown-day"
     >
     <img 
-      src="{{ '/assets/img/crown-night.svg' | relative_url }}" 
+      src="{{ '/assets/img/night-crown.svg' | relative_url }}" 
       alt="Night Crown" 
       class="home-crown crown-night"
     >
   </div>
 
-  <!-- HERO GALLERY -->
+  <!-- HERO GALLERY (images from assets/images/gallery/) -->
   <div class="hero-gallery">
     <div class="gallery-left">
-      <img src="{{ '/assets/img/gallery-left.jpg' | relative_url }}" alt="">
+      <img src="{{ '/assets/images/gallery/House_V2.jpeg' | relative_url }}" alt="Gallery image 1">
     </div>
     <div class="gallery-right">
-      <img src="{{ '/assets/img/gallery-right.jpg' | relative_url }}" alt="">
+      <img src="{{ '/assets/images/gallery/butterfly.jpeg' | relative_url }}" alt="Gallery image 2">
     </div>
   </div>
 
