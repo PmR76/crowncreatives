@@ -429,7 +429,7 @@ body[data-theme="night"] .card {
 }
 
 /* ============================================================
-   DAY REALM — WARM ENCHANTING FANTASY (MEDIUM WARMTH)
+   DAY REALM — CLEAN MODERNISED VERSION
    ============================================================ */
 
 .realm-day {
@@ -440,20 +440,21 @@ body[data-theme="night"] .card {
   z-index: -2;
 }
 
+/* Main warm fantasy gradient */
 .day-gradient {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at top center,
-      #FFEFD0 0%,
-      #FFE0B3 22%,
-      #FFD6C9 40%,
-      #F3E8FF 68%,
-      #DDEBFF 100%);
+  background: radial-gradient(circle at top center,
+    #FFEFD0 0%,
+    #FFE0B3 22%,
+    #FFD6C9 40%,
+    #F3E8FF 68%,
+    #DDEBFF 100%);
   opacity: 1;
   transition: opacity 1.2s ease;
 }
 
+/* Fade out all day elements when night mode is active */
 body[data-theme="night"] .day-gradient,
 body[data-theme="night"] .day-haze,
 body[data-theme="night"] .day-particles,
@@ -463,6 +464,7 @@ body[data-theme="night"] .day-cloud {
   pointer-events: none;
 }
 
+/* Soft drifting haze */
 .day-haze {
   position: absolute;
   inset: -10%;
@@ -480,6 +482,7 @@ body[data-theme="night"] .day-cloud {
   100% { transform: translateX(0); }
 }
 
+/* Floating warm particles */
 .day-particles {
   position: absolute;
   inset: 0;
@@ -508,6 +511,7 @@ body[data-theme="night"] .day-cloud {
   }
 }
 
+/* Central sunbeam glow */
 .day-sunbeam {
   position: absolute;
   top: -40px;
@@ -527,6 +531,7 @@ body[data-theme="night"] .day-cloud {
   100% { transform: translateX(-50%) translateY(0); }
 }
 
+/* Soft drifting clouds */
 .day-cloud {
   position: absolute;
   width: 420px;
@@ -559,6 +564,7 @@ body[data-theme="night"] .day-cloud {
   100% { transform: translateX(0); }
 }
 
+/* Responsive tuning */
 @media (max-width: 768px) {
   .day-sunbeam {
     width: 700px;
