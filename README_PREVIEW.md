@@ -40,3 +40,7 @@ Mapping list:
 .day-cloud        → .day-cloud
 .day-cloud-1      → .day-cloud-1
 .day-cloud-2      → .day-cloud-2
+.realm-engine   → .realm-engine
+.realm-night    → .realm-night
+.night-gradient → .night-gradient
+
