@@ -18,5 +18,3 @@ permalink: /gallery/
     <button id="lightbox-next" class="lightbox-next" aria-label="Next">&#10095;</button>
   </div>
 </section>
-
-
