@@ -208,11 +208,11 @@ body[data-theme="night"] .crown-night {
 .site-nav a:hover {
   opacity: 0.7;
 }
-
 /* -------------------------------------------------- */
-/* HERO SECTION — CROWN + HERO GALLERY LANES          */
+/* HERO SECTION — CLEAN MODERNISED VERSION            */
 /* -------------------------------------------------- */
 
+/* Main hero container */
 .home-hero {
   position: relative;
   width: 100%;
@@ -221,6 +221,7 @@ body[data-theme="night"] .crown-night {
   z-index: 5;
 }
 
+/* Crown wrapper */
 .hero-crown-wrapper {
   position: relative;
   width: 100%;
@@ -230,6 +231,7 @@ body[data-theme="night"] .crown-night {
   align-items: flex-start;
 }
 
+/* Cinematic crown */
 .home-crown {
   width: 374px;
   max-width: 60%;
@@ -242,17 +244,19 @@ body[data-theme="night"] .crown-night {
   transition: opacity 8s ease-in-out;
 }
 
+/* Hero gallery lanes */
 .hero-gallery {
   position: absolute;
   top: 40px;
   left: 0;
   width: 100%;
   height: 340px;
+  overflow: hidden;
   pointer-events: none;
   z-index: 1;
-  overflow: hidden;
 }
 
+/* Left + right lanes */
 .gallery-left,
 .gallery-right {
   position: absolute;
@@ -262,16 +266,22 @@ body[data-theme="night"] .crown-night {
   overflow: hidden;
 }
 
-.gallery-left { left: 0; }
-.gallery-right { right: 0; }
+.gallery-left {
+  left: 0;
+}
 
+.gallery-right {
+  right: 0;
+}
+
+/* Lane images */
 .lane-img {
   position: absolute;
   width: 40%;
   left: 30%;
   opacity: 0;
-  transition: opacity 4s ease-in-out;
   pointer-events: none;
+  transition: opacity 4s ease-in-out;
 }
 
 /* -------------------------------------------------- */
