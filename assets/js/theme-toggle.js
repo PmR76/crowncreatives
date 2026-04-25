@@ -1,23 +1,54 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
-  const savedTheme = localStorage.getItem("theme");
+  const toggle = document.querySelector('.theme-toggle');
+  const backToTop = document.querySelector('.back-to-top');
 
-  // Always default to DAY unless user has chosen otherwise
-  const defaultTheme = "day";
+  // -----------------------------
+  // THEME: default to SUMMER DAY
+  // -----------------------------
+  const stored = localStorage.getItem('cc-theme');
+  const initialTheme =
+    stored === 'day' || stored === 'night'
+      ? stored
+      : 'day'; // default: day
 
-  // Apply saved theme or default
-  const theme = savedTheme || defaultTheme;
-  body.setAttribute("data-theme", theme);
+  body.setAttribute('data-theme', initialTheme);
 
-  // Toggle button
-  const toggle = document.querySelector(".theme-toggle");
-  if (!toggle) return;
+  // -----------------------------
+  // THEME TOGGLE CLICK
+  // -----------------------------
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = body.getAttribute('data-theme') === 'night' ? 'night' : 'day';
+      const next = current === 'day' ? 'night' : 'day';
 
-  toggle.addEventListener("click", () => {
-    const current = body.getAttribute("data-theme");
-    const next = current === "day" ? "night" : "day";
+      body.setAttribute('data-theme', next);
+      localStorage.setItem('cc-theme', next);
+    });
+  }
 
-    body.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-  });
+  // -----------------------------
+  // BACK TO TOP BUTTON
+  // -----------------------------
+  if (backToTop) {
+    // Click scroll
+    backToTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Show / hide on scroll
+    const updateBackToTop = () => {
+      if (window.scrollY > 200) {
+        backToTop.style.opacity = '1';
+        backToTop.style.pointerEvents = 'auto';
+      } else {
+        backToTop.style.opacity = '0';
+        backToTop.style.pointerEvents = 'none';
+      }
+    };
+
+    updateBackToTop();
+    window.addEventListener('scroll', updateBackToTop);
+  }
 });
