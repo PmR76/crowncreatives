@@ -1,7 +1,6 @@
 ---
-layout: home
-show_hero_crown: true
-title: Crown Creatives
+layout: default
+body_class: home
 ---
 
 <!-- ========================================================= -->
