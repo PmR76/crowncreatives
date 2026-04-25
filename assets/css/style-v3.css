@@ -465,11 +465,10 @@ body[data-theme="night"] .footer-icons img:hover {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(circle at top center,
-    rgba(255, 250, 235, 1) 0%,
-    rgba(255, 240, 215, 0.95) 35%,
-    rgba(255, 245, 255, 0.9) 70%,
-    rgba(240, 245, 255, 0.95) 100%
+background:
+  radial-gradient(circle at top left, #ffffff 0%, #fff9e6 25%, transparent 55%),
+  radial-gradient(circle at top right, #ffe9c4 0%, #ffd59c 30%, transparent 60%),
+  radial-gradient(circle at bottom, #c9f3ff 0%, #a8e4ff 40%, #8fd0ff 80%);
   );
   opacity: 1;
   transition: opacity 1s ease;
