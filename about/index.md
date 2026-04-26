@@ -16,7 +16,7 @@ body_class: about
 <section class="about-section">
   <div class="about-image-block">
     <img
-      src="/assets/images/about/phoenix-house.jpg"
+      src="/assets/images/about/painting.png"
       alt="Phoenix House Recovery Centre, Catterick"
       class="about-image"
     >
@@ -34,7 +34,7 @@ body_class: about
 <section class="about-section">
   <div class="about-image-block">
     <img
-      src="/assets/images/about/creative-process.jpg"
+      src="/assets/images/about/my-story.png"
       alt="Working on a sculptural artwork in the studio"
       class="about-image"
     >
@@ -52,7 +52,7 @@ body_class: about
 <section class="about-section">
   <div class="about-image-block">
     <img
-      src="/assets/images/about/craft-focus.jpg"
+      src="/assets/images/about/sanding.JPG"
       alt="Hands sanding and shaping material"
       class="about-image"
     >
@@ -70,7 +70,7 @@ body_class: about
 <section class="about-section">
   <div class="about-image-block">
     <img
-      src="/assets/images/about/renewed-self.jpg"
+      src="/assets/images/about/sculpture_2.JPG"
       alt="Sculptural bust with mechanical elements"
       class="about-image"
     >
