@@ -112,11 +112,3 @@ body_class: about
     </div>
   </div>
 </section>
-
-<section class="about-closing">
-  <p>
-    Crown Creatives is for anyone rebuilding, creating, or searching for a little magic again.
-    This is a space where art, recovery, and imagination meet — gently, honestly, and with room
-    to grow.
-  </p>
-</section>
