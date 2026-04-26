@@ -527,4 +527,126 @@ body[data-theme="night"] svg[class*="crown"] {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.35);
 }
+/* ================================
+   VIDEOS PAGE — Magical Styling
+   ================================ */
+
+.videos-page {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.videos-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.videos-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.videos-hero p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Grid layout */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  padding: 0 2rem;
+}
+
+/* Video card */
+.video-card {
+  background: var(--card-bg, rgba(255,255,255,0.05));
+  border-radius: 16px;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.35);
+}
+
+/* Magical day/night glow */
+body.night .video-card {
+  box-shadow: 0 0 25px rgba(120, 180, 255, 0.25);
+}
+
+body.day .video-card {
+  box-shadow: 0 0 25px rgba(255, 200, 120, 0.25);
+}
+
+/* Video frame */
+.video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 125%; /* Instagram aspect ratio */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Caption */
+.video-caption {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  text-align: center;
+}
+/* ============================
+   MAGICAL VIEW COUNTER STYLES
+   ============================ */
+
+.view-counter {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  z-index: 999;
+  transition: all 0.4s ease;
+  opacity: 0.9;
+}
+
+/* Day mode glow */
+body.day .view-counter {
+  background: rgba(255, 240, 200, 0.4);
+  color: #5a3a00;
+  box-shadow: 0 0 12px rgba(255, 200, 120, 0.4);
+}
+
+/* Night mode glow */
+body.night .view-counter {
+  background: rgba(120, 160, 255, 0.25);
+  color: #dfe8ff;
+  box-shadow: 0 0 14px rgba(120, 180, 255, 0.35);
+}
+
+/* Hover magic */
+.view-counter:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
 

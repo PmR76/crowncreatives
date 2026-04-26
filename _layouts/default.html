@@ -1,40 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Crown Creatives</title>
 
-  {% include head.html %}
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
 
-<body id="top" class="{{ page.layout }}">
+<body class="{{ page.body_class }}">
 
+  <!-- ========================= -->
   <!-- HEADER -->
-  {% include header.html %}
+  <!-- ========================= -->
+  <header class="site-header">
 
-  <!-- HERO SECTION (HOME PAGE ONLY) -->
-  {% if page.layout == "home" %}
-    {{ content | split:"<!-- PAGE CONTENT -->" | first }}
-  {% endif %}
+    <!-- MAGICAL VIEW COUNTER (TOP LEFT) -->
+    <div id="view-counter" class="view-counter">
+      <span class="count-number">...</span>
+    </div>
 
+    <!-- THEME TOGGLE (TOP RIGHT) -->
+    <div class="theme-toggle">
+      <img 
+        src="/crowncreatives/assets/icons/sun-moon-magic.svg"
+        alt="Toggle theme" 
+        class="theme-icon"
+      >
+    </div>
+
+    <!-- HEADER CROWN -->
+    <div class="header-crown-wrapper">
+      <img 
+        src="{{ '/assets/img/head-crown.svg' | relative_url }}" 
+        alt="Crown Creatives Crown" 
+        class="header-crown-img"
+      >
+    </div>
+
+    <!-- TITLE + TAGLINE -->
+    <div class="header-title-block">
+      <h1 class="site-title">Crown Creatives</h1>
+      <p class="site-tagline">Artistry • Resilience • Imagination</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="site-nav">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">HOME</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">ABOUT</a></li>
+        <li><a href="{{ '/gallery/' | relative_url }}">GALLERY</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">PROJECTS</a></li>
+        <li><a href="{{ '/videos/' | relative_url }}">VIDEOS</a></li>
+        <li><a href="{{ '/podcasts/' | relative_url }}">PODCASTS</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">BLOG</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">CONTACT</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ========================= -->
   <!-- MAIN CONTENT -->
-  <main class="site-content">
-    {% if page.layout == "home" %}
-      {{ content | split:"<!-- PAGE CONTENT -->" | last }}
-    {% else %}
-      {{ content }}
-    {% endif %}
+  <!-- ========================= -->
+  <main class="site-main">
+    {{ content }}
   </main>
 
-  <!-- INSPIRATION TICKER -->
-  <div class="inspiration-ticker">
-    <div class="ticker-track">
-      <span>✨ Imagination becomes reality ✨ Creativity is your superpower ✨ Every idea is a spark of magic ✨ Artistry transforms the ordinary ✨ Believe boldly — create fearlessly ✨</span>
-    </div>
-  </div>
-
+  <!-- ========================= -->
   <!-- FOOTER -->
-  {% include footer.html %}
+  <!-- ========================= -->
+  <footer class="site-footer">
+    <p>&copy; {{ site.time | date: "%Y" }} Crown Creatives. All rights reserved.</p>
+  </footer>
 
-  <!-- THEME + HERO GALLERY ENGINE -->
-  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/hero-gallery.js' | relative_url }}"></script>
+  <!-- ========================= -->
+  <!-- JAVASCRIPT -->
+  <!-- ========================= -->
+  <script src="/assets/js/view-counter.js"></script> <!-- ⭐ STEP 2 ADDED -->
+  <script src="/assets/js/theme-toggle.js"></script>
+  <script src="/assets/js/magic.js"></script>
+  <script src="/assets/js/gallery.js"></script>
+  <script src="/assets/js/hero-gallery.js"></script>
 
 </body>
 </html>
