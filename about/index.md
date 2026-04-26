@@ -16,7 +16,7 @@ body_class: about
 <section class="about-section">
   <div class="about-image-block">
     <img
-      src="/assets/images/about/painting.png"
+      src="/assets/images/about/my-story.png"
       alt="Phoenix House Recovery Centre, Catterick"
       class="about-image"
     >
@@ -34,7 +34,7 @@ body_class: about
 <section class="about-section">
   <div class="about-image-block">
     <img
-      src="/assets/images/about/my-story.png"
+      src="/assets/images/about/painting.png"
       alt="Working on a sculptural artwork in the studio"
       class="about-image"
     >
