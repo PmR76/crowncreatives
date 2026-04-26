@@ -446,49 +446,85 @@ body[data-theme="night"] svg[class*="crown"] {
   100% { filter: drop-shadow(0 0 12px var(--glow-night)); }
 }
 /* ==========================================================================
-   ABOUT PAGE — LAYOUT & IMAGE STYLING
-   Description: Controls image sizing, section layout, and pillar cards for
-                the About page. Ensures responsive, balanced presentation.
+   ABOUT PAGE — DRAMATIC LAYOUT UPGRADE
+   Description: Adds cinematic spacing, stronger visual hierarchy, staggered
+                section flow, and more immersive image presentation.
    Last updated: 2026-04-26
    ========================================================================== */
-/* About Page Image Sizing */
+
+/* Dramatic image styling */
 .about-image {
   width: 100%;
-  max-width: 420px;
-  border-radius: 8px;
-  display: block;
+  max-width: 480px;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   margin: 0 auto;
 }
 
-/* Layout for image + text sections */
+.about-image:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
+}
+
+/* Dramatic section spacing + staggered flow */
 .about-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
-  margin: 60px 0;
+  margin: 100px 0;
+  position: relative;
 }
 
+/* Subtle stagger effect */
+.about-section:nth-child(even) .about-image-block {
+  order: 2;
+}
+.about-section:nth-child(even) .about-text-block {
+  order: 1;
+}
+
+/* Image + text blocks */
 .about-image-block {
-  flex: 1 1 300px;
+  flex: 1 1 350px;
   text-align: center;
 }
 
 .about-text-block {
-  flex: 1 1 300px;
+  flex: 1 1 350px;
+  padding: 10px 0;
 }
 
-/* Pillars section */
+/* Section titles more dramatic */
+.about-text-block h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+/* Pillars section — more presence */
 .pillars-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 40px;
+  gap: 40px;
+  margin-top: 60px;
 }
 
 .pillar-card {
-  flex: 1 1 250px;
-  padding: 20px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
+  flex: 1 1 280px;
+  padding: 30px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.pillar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
