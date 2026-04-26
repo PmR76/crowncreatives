@@ -18,7 +18,7 @@ body_class: videos-page
   <div class="video-card">
     <div class="video-frame">
       <iframe
-        src="https://www.instagram.com/p/reel/C816lvrvKLW/?igsh=MTZmdzd0c3Zud3ViaQ==/embed"
+        src="https://www.instagram.com/p/C8ysoFcNEA2/?igsh=MWZ3d3Jpdm5yNGtqNQ==/embed"
         frameborder="0"
         allowfullscreen
         scrolling="no"
@@ -29,5 +29,17 @@ body_class: videos-page
   </div>
 
   <!-- Another video coming soon -->
+  <div class="video-card">
+  <div class="video-frame">
+    <iframe
+      src="https://www.instagram.com/p/POST_ID/embed"
+      frameborder="0"
+      allowfullscreen
+      scrolling="no"
+      loading="lazy">
+    </iframe>
+  </div>
+  <p class="video-caption">Your caption here</p>
+</div>
 
 </section>
