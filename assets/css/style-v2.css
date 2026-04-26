@@ -445,3 +445,50 @@ body[data-theme="night"] svg[class*="crown"] {
   50% { filter: drop-shadow(0 0 22px var(--glow-night)); }
   100% { filter: drop-shadow(0 0 12px var(--glow-night)); }
 }
+/* ==========================================================================
+   ABOUT PAGE — LAYOUT & IMAGE STYLING
+   Description: Controls image sizing, section layout, and pillar cards for
+                the About page. Ensures responsive, balanced presentation.
+   Last updated: 2026-04-26
+   ========================================================================== */
+/* About Page Image Sizing */
+.about-image {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Layout for image + text sections */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.about-image-block {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-text-block {
+  flex: 1 1 300px;
+}
+
+/* Pillars section */
+.pillars-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.pillar-card {
+  flex: 1 1 250px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
