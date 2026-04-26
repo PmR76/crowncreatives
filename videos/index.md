@@ -14,7 +14,7 @@ body_class: videos-page
 
 <section class="videos-grid">
 
-  <!-- Example Instagram Embed -->
+  <!-- Pete instagram feed -->
   <div class="video-card">
     <div class="video-frame">
       <iframe
@@ -28,6 +28,6 @@ body_class: videos-page
     <p class="video-caption">Where it all began...</p>
   </div>
 
-  <!-- Add more videos by duplicating the block above -->
+  <!-- Another video coming soon -->
 
 </section>
