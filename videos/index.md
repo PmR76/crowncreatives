@@ -18,7 +18,7 @@ body_class: videos-page
   <div class="video-card">
     <div class="video-frame">
       <iframe
-        src="https://www.instagram.com/p/C8ysoFcNEA2/?igsh=MWZ3d3Jpdm5yNGtqNQ==/embed"
+        src="https://www.instagram.com/p/C8ysoFcNEA2/embed"
         frameborder="0"
         allowfullscreen
         scrolling="no"
