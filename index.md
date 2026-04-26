@@ -54,4 +54,3 @@ show_hero_crown: true
 
 </section>
  <!-- rebuild-index -->
-
