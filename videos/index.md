@@ -1,18 +1,33 @@
 ---
 layout: default
 title: Videos
+permalink: /videos/
+body_class: videos-page
 ---
 
-<section class="page-section">
-
+<section class="videos-hero">
   <h1>Videos</h1>
-
   <p>
-    A growing archive of video content, behind‑the‑scenes moments, creative breakdowns, and visual storytelling.
+    A collection of moments, experiments, and creative sparks — captured, shared, and brought to life.
   </p>
+</section>
 
-  <p>
-    Video gallery coming soon.
-  </p>
+<section class="videos-grid">
+
+  <!-- Example Instagram Embed -->
+  <div class="video-card">
+    <div class="video-frame">
+      <iframe
+        src="https://www.instagram.com/p/reel/C816lvrvKLW/?igsh=MTZmdzd0c3Zud3ViaQ==/embed"
+        frameborder="0"
+        allowfullscreen
+        scrolling="no"
+        loading="lazy">
+      </iframe>
+    </div>
+    <p class="video-caption">Where it all began...</p>
+  </div>
+
+  <!-- Add more videos by duplicating the block above -->
 
 </section>
